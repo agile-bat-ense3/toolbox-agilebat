@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox AGILE-BAT — Orientation du bâtiment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="site-header__logo">
+        Toolbox <span class="accent">AGILE-BAT</span>
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../esquisse.html" aria-current="page">Esquisse</a></li>
+          <li><a href="../aps.html">APS</a></li>
+          <li><a href="../outils.html">Outils</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="../index.html">Accueil</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="../esquisse.html">Esquisse</a>
+    <span class="breadcrumb__sep">›</span>
+    <span class="breadcrumb__current">Orientation du bâtiment</span>
+  </nav>
+
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
+  <main class="site-main">
+
+    <!-- En-tête de la fiche -->
+    <div class="badge-list">
+      <span class="badge badge--phase">Esquisse</span>
+      <span class="badge">Définir la volumétrie</span>
+    </div>
+    <h1>Quelle orientation donner à mon bâtiment ?</h1>
+    <p class="page-intro">
+      Tu as ton terrain et une volumétrie d'intention. Tu cherches à arbitrer
+      l'orientation principale de ton projet pour optimiser apports solaires
+      en hiver, protections en été, et confort général.
+    </p>
+
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <p>
+      L'orientation conditionne directement les besoins énergétiques du bâtiment.
+      Une façade principale orientée sud capte les apports solaires en hiver
+      (où le soleil est bas) et peut être protégée facilement en été par des
+      débords de toiture (où le soleil est haut). À l'inverse, une grande façade
+      ouest récupère les apports en fin de journée d'été, quand le bâtiment est
+      déjà chaud — c'est la principale cause de surchauffe estivale dans les logements.
+    </p>
+    <p>
+      Le choix d'orientation est l'un des premiers paramètres à figer parce qu'il
+      est très contraignant à modifier ensuite.
+    </p>
+
+    <!-- ======================================================
+         Outil recommandé
+         ====================================================== -->
+    <h2>Outil recommandé</h2>
+    <div class="tool-card">
+      <p class="tool-card__name">Autodesk Forma</p>
+      <p class="tool-card__meta">Web &mdash; Gratuit pour les étudiants (Autodesk Education)</p>
+      <p class="tool-card__desc">
+        Forma est un outil web gratuit pour les étudiants qui permet d'analyser
+        l'ensoleillement de plusieurs variantes d'orientation directement sur ton
+        terrain réel, en quelques minutes. Il prend en compte les masques des
+        bâtiments voisins.
+      </p>
+      <a href="../outils/forma.html" class="tool-card__link">Voir la fiche outil complète →</a>
+    </div>
+
+    <!-- ======================================================
+         Tutoriel vidéo
+         ====================================================== -->
+    <h2>Tutoriel vidéo</h2>
+
+    <!-- Remplacer le bloc .video-placeholder par un <iframe> quand la vidéo sera disponible.
+         Exemple : <iframe src="https://www.youtube.com/embed/ID_VIDEO" title="..." allowfullscreen></iframe> -->
+    <div class="video-container">
+      <div class="video-placeholder">
+        <span>Tutoriel vidéo à venir</span>
+        <span>Autodesk Forma — Analyse d'orientation</span>
+      </div>
+    </div>
+
+    <p>Étapes principales :</p>
+    <ol>
+      <li>Importer la volumétrie et localiser le terrain</li>
+      <li>Lancer l'analyse d'ensoleillement annuel</li>
+      <li>Comparer 2–3 variantes d'orientation côte à côte</li>
+      <li>Lire les résultats en heures d'ensoleillement par façade</li>
+    </ol>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>
+      Forma donne le nombre d'heures d'ensoleillement par façade sur l'année.
+      Ce qui compte, c'est moins la valeur absolue que la comparaison entre
+      variantes : on cherche l'orientation qui maximise le sud sans créer de
+      façade ouest trop exposée.
+    </p>
+    <p>
+      Une façade sud entre 1&nbsp;500 et 2&nbsp;000 h/an dans la région de
+      Grenoble est un bon ordre de grandeur.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites de cette approche</h2>
+    <ul>
+      <li>
+        Forma donne l'ensoleillement, pas les besoins énergétiques chiffrés.
+        Pour ça, il faut passer à La Maison Lambda ou à un outil APS.
+      </li>
+      <li>L'analyse ne prend pas en compte l'inertie du bâtiment ni les compositions de parois.</li>
+      <li>Les masques végétaux saisonniers (arbres à feuilles caduques) ne sont pas modélisés finement.</li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong><a href="../outils/maison-lambda.html">La Maison Lambda</a></strong> —
+        donne directement un bilan énergétique simplifié selon l'orientation,
+        pratique si tu veux des kWh plutôt que des heures d'ensoleillement.
+      </li>
+      <li>
+        <strong><a href="../outils/sunearthtools.html">Sunearthtools</a></strong> —
+        ultra-rapide pour visualiser la course du soleil sans modéliser le bâtiment,
+        utile en tout début de réflexion.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li>Guide ADEME «&nbsp;Concevoir un bâtiment passif&nbsp;» (chapitre orientation)</li>
+      <li>Documentation Autodesk Forma — module Solar Analysis</li>
+      <li>Cours ENSE3 PARIN — Architecture bioclimatique</li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="strategie-climatique.html" class="page-nav__prev">← Stratégie climatique</a>
+      <a href="../esquisse.html" class="page-nav__center">↑ Retour à Esquisse</a>
+      <a href="compacite.html" class="page-nav__next">Compacité →</a>
+    </nav>
+
+  </main>
+
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
+  <footer class="site-footer">
+    <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
+  </footer>
+
+</body>
+</html>

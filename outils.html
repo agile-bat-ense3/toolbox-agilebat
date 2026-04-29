@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox AGILE-BAT — Les outils</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        Toolbox <span class="accent">AGILE-BAT</span>
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="esquisse.html">Esquisse</a></li>
+          <li><a href="aps.html">APS</a></li>
+          <li><a href="outils.html" aria-current="page">Outils</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a>
+    <span class="breadcrumb__sep">›</span>
+    <span class="breadcrumb__current">Outils</span>
+  </nav>
+
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
+  <main class="site-main">
+
+    <!-- En-tête de page -->
+    <h1>Les outils de la toolbox</h1>
+    <p class="page-intro">
+      Les outils référencés ici ont été sélectionnés selon trois critères :
+      pertinence pour les questions de phase amont, accessibilité pour les étudiants
+      (gratuit ou licence école), et complémentarité entre eux.
+      Si tu cherches plutôt par question, reviens sur la
+      <a href="index.html">page d'accueil</a>.
+    </p>
+
+    <!-- Encadré de cadrage -->
+    <div class="callout">
+      <p>
+        Chaque outil est noté selon des critères pratiques :
+        accessibilité (gratuit/payant), compatibilité OS (Mac/Windows/web),
+        et niveau de prise en main (facile / intermédiaire / avancé).
+      </p>
+    </div>
+
+    <!-- ======================================================
+         Outils Esquisse
+         ====================================================== -->
+    <section>
+      <h2 id="outils-esquisse">Outils Esquisse</h2>
+      <ul class="tool-list">
+
+        <li>
+          <a href="outils/forma.html">
+            <span class="tool-name">Autodesk Forma</span>
+            <span class="tool-desc">Analyse de site, ensoleillement, masques, vents</span>
+            <span class="tool-meta">Web · Gratuit étudiants · Facile</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/maison-lambda.html">
+            <span class="tool-name">La Maison Lambda</span>
+            <span class="tool-desc">Bilan énergétique simplifié, comparaison de variantes</span>
+            <span class="tool-meta">Web · Gratuit · Facile</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/sunearthtools.html">
+            <span class="tool-name">Sunearthtools</span>
+            <span class="tool-desc">Course du soleil, diagramme solaire</span>
+            <span class="tool-meta">Web · Gratuit · Immédiat</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/climate-consultant.html">
+            <span class="tool-name">Climate Consultant</span>
+            <span class="tool-desc">Analyse climatique et stratégies passives</span>
+            <span class="tool-meta">Mac/Windows · Gratuit · Facile</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/ubakus.html">
+            <span class="tool-name">Ubakus</span>
+            <span class="tool-desc">Calcul de U et comportement hygrothermique de paroi</span>
+            <span class="tool-meta">Web · Gratuit · Facile</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/vizcab.html">
+            <span class="tool-name">Vizcab Explo / Campus</span>
+            <span class="tool-desc">Premier ordre de grandeur carbone</span>
+            <span class="tool-meta">Web · Gratuit (Campus) · Intermédiaire</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/miaep.html">
+            <span class="tool-name">Mi@ep</span>
+            <span class="tool-desc">Compacité du bâtiment</span>
+            <span class="tool-meta">Web · Gratuit · Immédiat</span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ======================================================
+         Outils APS
+         ====================================================== -->
+    <section>
+      <h2 id="outils-aps">Outils APS</h2>
+      <ul class="tool-list">
+
+        <li>
+          <a href="outils/pleiades.html">
+            <span class="tool-name">Pleiades</span>
+            <span class="tool-desc">Simulation thermique dynamique, calculs RE2020</span>
+            <span class="tool-meta">Windows · Payant (licence école) · Intermédiaire</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/openstudio.html">
+            <span class="tool-name">OpenStudio</span>
+            <span class="tool-desc">STD via interface graphique sur moteur EnergyPlus</span>
+            <span class="tool-meta">Mac/Windows · Gratuit · Intermédiaire</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/energyplus.html">
+            <span class="tool-name">EnergyPlus</span>
+            <span class="tool-desc">Moteur de simulation thermique de référence</span>
+            <span class="tool-meta">Mac/Windows · Gratuit · Avancé</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="outils/rhino-grasshopper.html">
+            <span class="tool-name">Rhino + Grasshopper</span>
+            <span class="tool-desc">Analyse paramétrique, comparaison massive de variantes (Ladybug/Honeybee)</span>
+            <span class="tool-meta">Mac/Windows · Rhino payant · Avancé</span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Encadré de transparence -->
+    <div class="callout">
+      <p class="callout__title">Comment cette toolbox a été construite</p>
+      <p>
+        Quatre outils ont été testés en profondeur sur un cas d'étude réel
+        (la maison en terre PhITEM à Saint-Martin-d'Hères) : Pleiades, OpenStudio,
+        EnergyPlus et Rhino+Grasshopper. Les autres sont documentés à partir de la
+        documentation officielle et de retours d'usage par des architectes en exercice.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
+  <footer class="site-footer">
+    <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
+  </footer>
+
+</body>
+</html>

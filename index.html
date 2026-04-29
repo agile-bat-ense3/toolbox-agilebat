@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox AGILE-BAT — Accueil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        Toolbox <span class="accent">AGILE-BAT</span>
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="esquisse.html">Esquisse</a></li>
+          <li><a href="aps.html">APS</a></li>
+          <li><a href="outils.html">Outils</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
+  <main class="site-main">
+
+    <!-- Hero -->
+    <section class="home-hero">
+      <h1>Toolbox AGILE-BAT</h1>
+      <p class="subtitle">Performance énergétique en phase amont</p>
+      <p>
+        Cette toolbox est destinée aux étudiants en ingénierie et en architecture
+        qui travaillent sur les performances énergétiques d'un bâtiment en phase
+        amont de conception. Elle part d'une question concrète —
+        <em>«&nbsp;comment orienter mon bâtiment&nbsp;?»</em>,
+        <em>«&nbsp;vais-je avoir trop chaud en été&nbsp;?»</em>,
+        <em>«&nbsp;quel est l'impact carbone de mes choix&nbsp;?»</em> —
+        et te guide vers l'outil le plus adapté à ton stade de projet,
+        avec une explication courte et un tutoriel visuel.
+      </p>
+      <p>
+        Elle a été développée dans le cadre du projet AGILE-BAT à Grenoble INP – ENSE3,
+        en partenariat avec des architectes en exercice et des éditeurs de logiciels du secteur.
+      </p>
+    </section>
+
+    <!-- Comment l'utiliser -->
+    <section>
+      <h2>Comment l'utiliser</h2>
+      <div class="callout callout--info">
+        <p>
+          Choisis ta phase de projet ci-dessous. Si tu hésites entre les deux,
+          lis les descriptions : la phase Esquisse correspond au tout début
+          (terrain + intention), la phase APS correspond au moment où ta
+          volumétrie est figée et où tu veux chiffrer les performances.
+        </p>
+      </div>
+
+      <!-- Grille des deux phases -->
+      <div class="phase-grid">
+
+        <!-- Bloc Esquisse -->
+        <a href="esquisse.html" class="phase-card">
+          <span class="phase-card__label">Esquisse</span>
+          <span class="phase-card__title">Début de projet</span>
+          <span class="phase-card__desc">
+            Tu démarres ton projet : tu as un terrain, un programme,
+            une volumétrie d'intention. Tu cherches à orienter tes
+            choix avec des outils rapides et accessibles,
+            sans modélisation détaillée.
+          </span>
+          <span class="phase-card__cta">Aller à la phase Esquisse →</span>
+        </a>
+
+        <!-- Bloc APS -->
+        <a href="aps.html" class="phase-card">
+          <span class="phase-card__label">APS — Avant-Projet Sommaire</span>
+          <span class="phase-card__title">Volumétrie figée</span>
+          <span class="phase-card__desc">
+            Ta volumétrie est figée, tu as une idée des principes
+            constructifs. Tu veux chiffrer les performances
+            énergétiques avec des outils de simulation
+            thermique dynamique.
+          </span>
+          <span class="phase-card__cta">Aller à la phase APS →</span>
+        </a>
+
+      </div>
+
+      <!-- Lien secondaire vers la liste des outils -->
+      <p class="secondary-link">
+        Tu connais déjà l'outil que tu veux utiliser ?
+        <a href="outils.html">Voir la liste complète des outils →</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
+  <footer class="site-footer">
+    <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
+  </footer>
+
+</body>
+</html>

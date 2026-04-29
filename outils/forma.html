@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox AGILE-BAT — Autodesk Forma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="site-header__logo">
+        Toolbox <span class="accent">AGILE-BAT</span>
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../esquisse.html">Esquisse</a></li>
+          <li><a href="../aps.html">APS</a></li>
+          <li><a href="../outils.html" aria-current="page">Outils</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="../index.html">Accueil</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="../outils.html">Outils</a>
+    <span class="breadcrumb__sep">›</span>
+    <span class="breadcrumb__current">Autodesk Forma</span>
+  </nav>
+
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
+  <main class="site-main">
+
+    <!-- En-tête de la fiche -->
+    <div class="badge-list">
+      <span class="badge badge--phase">Esquisse</span>
+    </div>
+    <h1>Autodesk Forma</h1>
+
+    <!-- ======================================================
+         Bloc identité (tableau de métadonnées)
+         ====================================================== -->
+    <div class="tool-identity">
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Éditeur</span>
+        <span class="tool-identity__value">Autodesk</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Type</span>
+        <span class="tool-identity__value">Application web</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Plateforme</span>
+        <span class="tool-identity__value">Web (tous OS — Mac, Windows, Linux)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Tarif</span>
+        <span class="tool-identity__value">Gratuit via Autodesk Education (vérification du statut étudiant requise)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Site officiel</span>
+        <span class="tool-identity__value">
+          <a href="https://www.autodesk.com/products/forma" target="_blank" rel="noopener">
+            autodesk.com/products/forma →
+          </a>
+        </span>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         À quoi ça sert
+         ====================================================== -->
+    <h2>À quoi ça sert</h2>
+    <p>
+      Forma est un outil web d'aide à la décision en phase amont, conçu pour
+      les architectes. Il permet d'analyser un site (ensoleillement, masques,
+      vents, bruit) et de tester plusieurs variantes de volumétrie en quelques
+      minutes, à partir d'une modélisation simple. C'est l'un des rares outils
+      pensés pour la vraie phase Esquisse.
+    </p>
+
+    <!-- ======================================================
+         Quand l'utiliser dans cette toolbox
+         ====================================================== -->
+    <h2>Quand l'utiliser dans cette toolbox</h2>
+    <p>Forma répond aux questions suivantes de la phase Esquisse :</p>
+    <ul>
+      <li><a href="../questions/course-soleil.html">Quelle est la course du soleil sur mon terrain ?</a></li>
+      <li><a href="../questions/masques-solaires.html">Mon terrain subit-il des masques solaires ?</a></li>
+      <li><a href="../questions/vents-dominants.html">Quels sont les vents dominants ?</a></li>
+      <li><a href="../questions/orientation.html">Quelle orientation principale donner à mon bâtiment ?</a></li>
+      <li><a href="../questions/compacite.html">Mon bâtiment est-il assez compact ?</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Prise en main
+         ====================================================== -->
+    <h2>Prise en main</h2>
+    <p>
+      Compter une demi-journée pour être à l'aise avec l'interface et savoir
+      lancer une analyse d'ensoleillement. Aucun prérequis particulier —
+      l'outil est conçu pour être accessible à des architectes sans formation thermicienne.
+    </p>
+    <div class="callout callout--info">
+      <p>
+        La création d'un compte Autodesk Education prend 24 à 48 h
+        (vérification du statut étudiant) : <strong>à anticiper avant la séance</strong>.
+      </p>
+    </div>
+
+    <!-- ======================================================
+         Forces et Limites
+         ====================================================== -->
+    <h2>Forces et limites</h2>
+    <div class="two-cols">
+
+      <div>
+        <h3>Forces</h3>
+        <ul>
+          <li>Outil web, fonctionne sur Mac comme sur Windows</li>
+          <li>Interface conçue pour l'amont, pas une simulation thermique simplifiée</li>
+          <li>Comparaison directe de plusieurs variantes côte à côte</li>
+          <li>Données de site (météo, contexte urbain) automatiquement chargées à partir de la localisation</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Limites</h3>
+        <ul>
+          <li>Donne des indicateurs (ensoleillement, vents) mais pas de besoins énergétiques chiffrés en kWh</li>
+          <li>Modélisation très simplifiée — pas adapté dès qu'on rentre dans le détail des compositions de parois</li>
+          <li>Dépendance à l'écosystème Autodesk (compte, navigateur, connexion internet permanente)</li>
+          <li>Documentation principalement en anglais</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ======================================================
+         Ressources
+         ====================================================== -->
+    <h2>Ressources</h2>
+    <ul>
+      <li>
+        <a href="https://help.autodesk.com/forma" target="_blank" rel="noopener">
+          Documentation officielle Autodesk Forma →
+        </a>
+      </li>
+      <li>Chaîne YouTube Autodesk Forma (tutoriels courts par fonctionnalité)</li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation">
+      <span></span>
+      <a href="../outils.html" class="page-nav__center">← Retour à la liste des outils</a>
+      <span></span>
+    </nav>
+
+  </main>
+
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
+  <footer class="site-footer">
+    <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
+  </footer>
+
+</body>
+</html>
