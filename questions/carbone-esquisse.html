@@ -11,6 +11,9 @@
 </head>
 <body>
 
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="site-header__logo">
@@ -27,6 +30,9 @@
     </div>
   </header>
 
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="../index.html">Accueil</a>
     <span class="breadcrumb__sep">›</span>
@@ -35,21 +41,168 @@
     <span class="breadcrumb__current">Impact carbone — Esquisse</span>
   </nav>
 
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
   <main class="site-main">
 
+    <!-- En-tête de la fiche -->
     <div class="badge-list">
       <span class="badge badge--phase">Esquisse</span>
       <span class="badge">Premiers ordres de grandeur</span>
     </div>
     <h1>Quel premier ordre de grandeur d'impact carbone pour mes choix constructifs majeurs ?</h1>
+    <p class="page-intro">
+      Tu as défini tes premiers choix constructifs : structure, matériaux d'enveloppe,
+      type d'isolation. Tu veux estimer l'impact carbone de ces choix avant de les figer,
+      et comparer des variantes entre elles.
+    </p>
 
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../esquisse.html">← Retour à la phase Esquisse</a></p>
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <p>
+      L'impact carbone des matériaux — appelé "carbone incorporé" ou
+      <strong>Ic_construction</strong> dans la RE2020 — est l'un des deux grands
+      indicateurs réglementaires depuis 2022. En phase Esquisse, les grands choix
+      constructifs (béton vs bois, type d'isolant, menuiseries) peuvent faire varier
+      l'impact carbone d'un facteur 2 à 3. C'est à ce stade que ces arbitrages sont
+      encore simples et peu coûteux à modifier.
+    </p>
+    <p>
+      Plus on attend, plus les changements sont contraignants. Un ordre de grandeur
+      obtenu en Esquisse ne vaut pas une validation RE2020, mais il permet d'éviter
+      des impasses et d'orienter les choix dans la bonne direction.
+    </p>
+
+    <!-- ======================================================
+         Outil recommandé
+         ====================================================== -->
+    <h2>Outil recommandé</h2>
+    <div class="tool-card">
+      <p class="tool-card__name">Vizcab Campus</p>
+      <p class="tool-card__meta">Web &mdash; Gratuit &mdash; Accessible sans formation préalable</p>
+      <p class="tool-card__desc">
+        Vizcab Campus s'appuie sur la base de données INIES (FDES, PEP, DED) et
+        permet de réaliser un premier jet d'ACV bâtiment à la main, directement
+        sur le site. C'est la version la plus accessible pour un étudiant en autonomie
+        qui veut comparer l'impact carbone de deux variantes constructives.
+      </p>
+      <a href="../outils/vizcab.html" class="tool-card__link">Voir la fiche outil complète →</a>
     </div>
+
+    <!-- ======================================================
+         Tutoriel vidéo
+         ====================================================== -->
+    <h2>Tutoriel vidéo</h2>
+
+    <!-- Remplacer le bloc .video-placeholder par un <iframe> quand la vidéo sera disponible.
+         Exemple : <iframe src="https://www.youtube.com/embed/ID_VIDEO" title="..." allowfullscreen></iframe> -->
+    <div class="video-container">
+      <div class="video-placeholder">
+        <span>Tutoriel vidéo à venir</span>
+        <span>Vizcab Campus — Premier jet d'ACV bâtiment</span>
+      </div>
+    </div>
+
+    <p>Étapes principales :</p>
+    <ol>
+      <li>Créer un projet et renseigner les caractéristiques du bâtiment (surface, type, localisation)</li>
+      <li>Associer les matériaux de chaque composant à une FDES dans la base INIES</li>
+      <li>Renseigner les quantités (surfaces, volumes)</li>
+      <li>Lire l'indicateur Ic_construction en kgCO2eq/m² SDP et comparer les variantes</li>
+    </ol>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>
+      Vizcab Campus donne un indicateur en <strong>kgCO2eq/m² SDP</strong>
+      (surface de plancher). Ce qui compte en phase Esquisse, c'est moins la valeur
+      absolue que la <strong>comparaison entre variantes</strong> : est-ce qu'une
+      structure bois à la place du béton divise l'impact carbone par 2 ? Est-ce
+      que le choix de l'isolant change significativement le résultat ?
+    </p>
+    <p>
+      Pour avoir un ordre de grandeur de référence : les seuils RE2020 pour
+      Ic_construction se situent entre 500 et 800 kgCO2eq/m² SDP selon le type
+      de bâtiment et la zone géographique. Ces seuils ne s'appliquent pas directement
+      au calcul Campus (qui n'est pas accrédité), mais donnent une échelle de lecture.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites de cette approche</h2>
+    <ul>
+      <li>
+        Vizcab Campus donne un ordre de grandeur, pas une validation RE2020 officielle —
+        pour ça il faut passer à Vizcab Eval (payant, accrédité DHUP).
+      </li>
+      <li>
+        La précision dépend des FDES disponibles dans la base INIES pour tes matériaux.
+        Les matériaux non-conventionnels (terre crue, paille, bois non certifié)
+        sont moins bien couverts.
+      </li>
+      <li>
+        Le calcul couvre le carbone incorporé (Ic_construction) mais pas le volet
+        énergie (Ic_énergie) — pour ça il faut coupler avec un outil de simulation
+        thermique dynamique.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong><a href="../outils/vizcab.html">Add-In Excel Vizcab</a></strong> —
+        même logique que Campus mais dans un tableur. Plus de flexibilité si tu
+        maîtrises Excel et que tu veux structurer ton calcul librement.
+      </li>
+      <li>
+        <strong><a href="../outils/vizcab.html">Vizcab Explo</a></strong> —
+        plus complet et mieux adapté à la comparaison de variantes volumétriques,
+        mais nécessite 2 à 3 jours de formation et un accès payant.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li>
+        <a href="https://www.inies.fr" target="_blank" rel="noopener">
+          Base INIES →
+        </a> — source officielle des données environnementales des matériaux (FDES, PEP, DED)
+      </li>
+      <li>
+        <a href="https://blog.vizcab.io/fr/tag/webinaire" target="_blank" rel="noopener">
+          Webinaires Vizcab →
+        </a> — introduction à l'ACV bâtiment
+      </li>
+      <li>Guide DHUP RE2020 — explication des indicateurs Ic_construction et Ic_énergie</li>
+      <li>Cours ENSE3 PARIN — Analyse du cycle de vie et RE2020</li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="u-parois-esquisse.html" class="page-nav__prev">← U des parois RE2020</a>
+      <a href="../esquisse.html" class="page-nav__center">↑ Retour à Esquisse</a>
+      <span></span>
+    </nav>
 
   </main>
 
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
   <footer class="site-footer">
     <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
   </footer>
