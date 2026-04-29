@@ -11,6 +11,9 @@
 </head>
 <body>
 
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="site-header__logo">
@@ -27,28 +30,231 @@
     </div>
   </header>
 
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="../index.html">Accueil</a>
     <span class="breadcrumb__sep">›</span>
     <a href="../outils.html">Outils</a>
     <span class="breadcrumb__sep">›</span>
-    <span class="breadcrumb__current">Vizcab Explo / Campus</span>
+    <span class="breadcrumb__current">Vizcab</span>
   </nav>
 
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
   <main class="site-main">
 
+    <!-- En-tête de la fiche -->
     <div class="badge-list">
       <span class="badge badge--phase">Esquisse</span>
+      <span class="badge badge--phase">APS</span>
     </div>
-    <h1>Vizcab Explo / Vizcab Campus</h1>
+    <h1>Vizcab</h1>
 
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../outils.html">← Retour à la liste des outils</a></p>
+    <!-- ======================================================
+         Bloc identité (tableau de métadonnées)
+         ====================================================== -->
+    <div class="tool-identity">
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Éditeur</span>
+        <span class="tool-identity__value">Vizcab (start-up française basée à Lyon)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Type</span>
+        <span class="tool-identity__value">Plateforme web (SaaS)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Plateforme</span>
+        <span class="tool-identity__value">Web (tous OS)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Tarif</span>
+        <span class="tool-identity__value">Plusieurs versions — gratuites et payantes (voir ci-dessous)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Site officiel</span>
+        <span class="tool-identity__value">
+          <a href="https://vizcab.io" target="_blank" rel="noopener">vizcab.io →</a>
+        </span>
+      </div>
     </div>
+
+    <!-- ======================================================
+         À quoi ça sert
+         ====================================================== -->
+    <h2>À quoi ça sert</h2>
+    <p>
+      Vizcab est une plateforme française dédiée au calcul de l'empreinte carbone
+      des bâtiments. Elle permet de réaliser des Analyses de Cycle de Vie (ACV)
+      conformes à la méthode officielle, en s'appuyant sur la base INIES
+      (FDES, PEP, DED). Son cœur de métier est la validation réglementaire RE2020
+      sur les projets neufs : Vizcab est accrédité par la DHUP pour produire les
+      justifications officielles (RSEE, Ic_construction, Ic_énergie). La plateforme
+      s'ouvre progressivement à d'autres usages (rénovation, multi-projets), mais
+      reste avant tout un outil neuf&nbsp;+ RE2020.
+    </p>
+
+    <!-- ======================================================
+         Les différentes versions de Vizcab
+         ====================================================== -->
+    <h2>Les différentes versions de Vizcab</h2>
+    <p>
+      Vizcab n'est pas un seul outil, c'est une suite. Pour un étudiant,
+      il faut comprendre laquelle utiliser :
+    </p>
+    <ul>
+      <li>
+        <strong>Vizcab Campus</strong> — Gratuit, accessible à tous.
+        Version découverte volontairement très limitée. Conçue pour comprendre
+        ce qu'est une ACV bâtiment, pas pour produire des études.
+      </li>
+      <li>
+        <strong>Vizcab Explo</strong> — Payant. Aide à la décision en phase amont,
+        comparaison de variantes volumétriques, indicateurs de compacité, premiers
+        ordres de grandeur carbone. Pas accessible étudiant en autonomie.
+      </li>
+      <li>
+        <strong>Vizcab Eval</strong> — Payant. Outil de référence pour la validation
+        RE2020 accréditée. Pas accessible étudiant en autonomie.
+      </li>
+      <li>
+        <strong>Add-In Excel Vizcab</strong> — Gratuit. Module complémentaire pour
+        Excel qui permet d'associer les FDES INIES à des quantitatifs et de produire
+        un calcul carbone simplifié directement dans un tableur. Bonne porte
+        d'entrée gratuite et concrète.
+      </li>
+    </ul>
+    <div class="callout callout--info">
+      <p class="callout__title">Pour un étudiant en autonomie</p>
+      <p>
+        Les deux versions exploitables sont <strong>Campus</strong> (pour découvrir
+        la démarche ACV) et <strong>Add-In Excel</strong> (pour produire un calcul
+        simplifié). Les versions Explo et Eval supposent un accès payant ou une
+        licence école.
+      </p>
+    </div>
+
+    <!-- ======================================================
+         Quand l'utiliser dans cette toolbox
+         ====================================================== -->
+    <h2>Quand l'utiliser dans cette toolbox</h2>
+    <p>
+      <strong>Phase Esquisse</strong> — pour avoir un premier ordre de grandeur
+      d'impact carbone à partir de choix constructifs sommaires. Vizcab Campus
+      permet d'illustrer la démarche.
+    </p>
+    <p>
+      <strong>Phase APS et au-delà</strong> — pour des calculs ACV plus avancés
+      et une éventuelle validation RE2020, mais cela suppose un accès aux
+      versions payantes.
+    </p>
+    <p>Vizcab répond aux questions suivantes de la toolbox :</p>
+    <ul>
+      <li>
+        <a href="../questions/carbone-esquisse.html">
+          Quel premier ordre de grandeur d'impact carbone pour mes choix constructifs majeurs ?
+        </a>
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Prise en main
+         ====================================================== -->
+    <h2>Prise en main</h2>
+    <p>
+      Honnêtement, Vizcab demande un temps de formation non négligeable, même
+      pour la version Campus. Selon Vizcab eux-mêmes, <strong>2 à 3 jours</strong>
+      sont nécessaires pour une bonne exploration de l'outil. Quelques notions
+      préalables aident beaucoup :
+    </p>
+    <ul>
+      <li>Comprendre ce qu'est une ACV bâtiment (cycle de vie, périmètre, contributeurs)</li>
+      <li>Connaître la base INIES, les FDES (matériaux), les PEP (équipements), les DED (données conventionnelles)</li>
+      <li>Avoir une notion des seuils RE2020 (Ic_construction, Ic_énergie)</li>
+    </ul>
+    <p>
+      Un étudiant qui découvre l'ACV en même temps que l'outil aura besoin de
+      plus de temps. La documentation Vizcab et leurs webinaires sont une bonne aide.
+      L'Add-In Excel est plus accessible si tu es déjà à l'aise avec Excel,
+      parce qu'il garde la main sur la structure du calcul.
+    </p>
+
+    <!-- ======================================================
+         Forces et Limites
+         ====================================================== -->
+    <h2>Forces et limites</h2>
+    <div class="two-cols">
+
+      <div>
+        <h3>Forces</h3>
+        <ul>
+          <li>Outil français, conforme à la méthode RE2020 officielle, accrédité DHUP</li>
+          <li>Base de données INIES intégrée et tenue à jour automatiquement</li>
+          <li>Couvre tout le cycle de vie d'un projet : de la phase amont à la validation réglementaire</li>
+          <li>Plusieurs niveaux d'entrée selon le besoin (Campus, Excel, plateforme complète)</li>
+          <li>Algorithmes de matching pour associer les FDES aux quantitatifs (gain de temps)</li>
+          <li>Documentation et support en français</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Limites</h3>
+        <ul>
+          <li><strong>Cœur de cible : neuf et RE2020.</strong> Pour la rénovation ou les bâtiments hors RE2020, l'outil est en cours d'ouverture mais moins mature.</li>
+          <li><strong>Campus très limité</strong> — version découverte, pas de production. Pour aller plus loin : versions payantes.</li>
+          <li>Pas encore d'import direct depuis les outils BIM (Revit, ArchiCAD, IFC) ; passerelles annoncées.</li>
+          <li>Matériaux non-conventionnels (terre crue, paille) : couverture FDES limitée dans la base INIES.</li>
+          <li><strong>Compétence ACV requise</strong> — l'outil ne dispense pas de comprendre ce qu'on calcule.</li>
+          <li>Pour traiter énergie et carbone, Vizcab doit être couplé à un outil de STD (type Pleiades) qui produit le calcul énergie (R7).</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ======================================================
+         Ressources
+         ====================================================== -->
+    <h2>Ressources</h2>
+    <ul>
+      <li><a href="https://vizcab.io" target="_blank" rel="noopener">Site officiel — vizcab.io →</a></li>
+      <li><a href="https://blog.vizcab.io/fr/tag/webinaire" target="_blank" rel="noopener">Webinaires Vizcab →</a></li>
+      <li><a href="https://blog.vizcab.io/fr/tag/article" target="_blank" rel="noopener">Articles et études de cas →</a></li>
+      <li><a href="https://vizcab.io/vizcab-materiaux-construction" target="_blank" rel="noopener">Score environnemental Vizcab (comparaison de matériaux) →</a></li>
+      <li><a href="https://vizcab.zendesk.com/hc/fr" target="_blank" rel="noopener">Documentation export RSEE →</a></li>
+      <li><a href="https://www.inies.fr" target="_blank" rel="noopener">Base INIES — source officielle des FDES →</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Note pédagogique
+         ====================================================== -->
+    <h2>Note pédagogique</h2>
+    <div class="callout callout--info">
+      <p>
+        Cette fiche a été enrichie par un entretien direct avec un membre de l'équipe
+        Vizcab dans le cadre du projet AGILE-BAT. Le message principal qu'ils
+        transmettent aux étudiants : <strong>avant d'utiliser l'outil, il faut
+        comprendre l'ACV bâtiment.</strong> L'outil n'est qu'un calculateur — la
+        valeur ajoutée vient de la capacité à interpréter les résultats et à orienter
+        les choix constructifs en conséquence.
+      </p>
+    </div>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation">
+      <span></span>
+      <a href="../outils.html" class="page-nav__center">← Retour à la liste des outils</a>
+      <span></span>
+    </nav>
 
   </main>
 
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
   <footer class="site-footer">
     <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
   </footer>
