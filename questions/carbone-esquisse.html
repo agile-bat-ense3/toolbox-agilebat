@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toolbox AGILE-BAT — Impact carbone (Esquisse)</title>
+  <title>Toolbox AGILE-BAT — Premier ordre de grandeur carbone (Esquisse)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -38,7 +38,7 @@
     <span class="breadcrumb__sep">›</span>
     <a href="../esquisse.html">Esquisse</a>
     <span class="breadcrumb__sep">›</span>
-    <span class="breadcrumb__current">Impact carbone — Esquisse</span>
+    <span class="breadcrumb__current">Premier ordre de grandeur carbone</span>
   </nav>
 
   <!-- ========================================================
@@ -51,11 +51,12 @@
       <span class="badge badge--phase">Esquisse</span>
       <span class="badge">Premiers ordres de grandeur</span>
     </div>
-    <h1>Quel premier ordre de grandeur d'impact carbone pour mes choix constructifs majeurs ?</h1>
+    <h1>Quel premier ordre de grandeur d'impact carbone pour mes choix constructifs majeurs&nbsp;?</h1>
     <p class="page-intro">
-      Tu as défini tes premiers choix constructifs : structure, matériaux d'enveloppe,
-      type d'isolation. Tu veux estimer l'impact carbone de ces choix avant de les figer,
-      et comparer des variantes entre elles.
+      Tu as ton terrain, ton programme, une intention volumétrique, et tu envisages quelques
+      matériaux principaux (béton, terre crue, bois, brique&hellip;). Tu cherches à savoir,
+      sans encore avoir fait une ACV complète, quel ordre de grandeur d'impact carbone tu peux
+      espérer selon tes grands choix constructifs.
     </p>
 
     <!-- ======================================================
@@ -63,17 +64,21 @@
          ====================================================== -->
     <h2>Pourquoi cette question compte</h2>
     <p>
-      L'impact carbone des matériaux — appelé "carbone incorporé" ou
-      <strong>Ic_construction</strong> dans la RE2020 — est l'un des deux grands
-      indicateurs réglementaires depuis 2022. En phase Esquisse, les grands choix
-      constructifs (béton vs bois, type d'isolant, menuiseries) peuvent faire varier
-      l'impact carbone d'un facteur 2 à 3. C'est à ce stade que ces arbitrages sont
-      encore simples et peu coûteux à modifier.
+      L'impact carbone d'un bâtiment se décompose en deux grandes parts&nbsp;: l'<strong>Ic_construction</strong>
+      (matériaux et mise en œuvre) et l'<strong>Ic_énergie</strong> (énergie consommée sur 50 ans d'usage).
+      Les choix faits en esquisse &mdash; système constructif principal, type d'enveloppe, niveau
+      d'isolation &mdash; verrouillent une grande partie de l'Ic_construction et conditionnent
+      indirectement l'Ic_énergie.
     </p>
     <p>
-      Plus on attend, plus les changements sont contraignants. Un ordre de grandeur
-      obtenu en Esquisse ne vaut pas une validation RE2020, mais il permet d'éviter
-      des impasses et d'orienter les choix dans la bonne direction.
+      Aller chercher un ordre de grandeur dès l'esquisse, c'est éviter de découvrir trop tard
+      qu'un choix structurel verrouille un mauvais score carbone. C'est aussi l'occasion d'apprendre
+      à raisonner avec les <strong>FDES</strong> (Fiches de Déclaration Environnementale et Sanitaire)
+      de la base INIES, qui sont la référence française pour l'ACV bâtiment.
+    </p>
+    <p>
+      À ce stade, on ne cherche pas la précision réglementaire&nbsp;: on cherche le bon ordre de
+      grandeur pour orienter les décisions.
     </p>
 
     <!-- ======================================================
@@ -84,34 +89,137 @@
       <p class="tool-card__name">Vizcab Campus</p>
       <p class="tool-card__meta">Web &mdash; Gratuit &mdash; Accessible sans formation préalable</p>
       <p class="tool-card__desc">
-        Vizcab Campus s'appuie sur la base de données INIES (FDES, PEP, DED) et
-        permet de réaliser un premier jet d'ACV bâtiment à la main, directement
-        sur le site. C'est la version la plus accessible pour un étudiant en autonomie
-        qui veut comparer l'impact carbone de deux variantes constructives.
+        Vizcab Campus est la version gratuite et accessible en autonomie de la plateforme française
+        Vizcab. Elle donne accès à un explorateur de la base INIES (FDES nationales) et à un
+        explorateur FDES/PEP international, avec une visualisation par boîtes à moustache qui permet
+        de comparer rapidement la dispersion des valeurs au sein d'une catégorie de matériaux.
+      </p>
+      <p class="tool-card__desc">
+        C'est l'outil le plus adapté en autonomie pour un étudiant qui découvre l'ACV bâtiment et
+        veut comparer rapidement plusieurs matériaux candidats. Pour les étudiants accompagnés par
+        un enseignant formé, Vizcab propose également une <strong>offre académique gratuite</strong>
+        plus complète (voir la fiche outil Vizcab pour les conditions).
       </p>
       <a href="../outils/vizcab.html" class="tool-card__link">Voir la fiche outil complète →</a>
     </div>
 
     <!-- ======================================================
-         Tutoriel vidéo
+         Faire le test toi-même sur Vizcab Campus
          ====================================================== -->
-    <h2>Tutoriel vidéo</h2>
+    <h2>Faire le test toi-même sur Vizcab Campus</h2>
 
-    <!-- Remplacer le bloc .video-placeholder par un <iframe> quand la vidéo sera disponible.
-         Exemple : <iframe src="https://www.youtube.com/embed/ID_VIDEO" title="..." allowfullscreen></iframe> -->
-    <div class="video-container">
-      <div class="video-placeholder">
-        <span>Tutoriel vidéo à venir</span>
-        <span>Vizcab Campus — Premier jet d'ACV bâtiment</span>
-      </div>
-    </div>
+    <h3>Étape 1 &mdash; Accéder à la bibliothèque environnementale</h3>
+    <figure class="figure">
+      <img
+        src="../assets/images/vizcab-fdes/01-bibliotheque.png"
+        alt="Bibliothèque Vizcab avec trois explorateurs disponibles"
+        loading="lazy"
+      />
+      <figcaption>Étape 1 — La bibliothèque Vizcab Campus propose trois portes d'entrée.</figcaption>
+    </figure>
+    <p>
+      Vizcab Campus propose trois portes d'entrée. Pour des matériaux français standards, choisis
+      <em>«&nbsp;Explorateur de fiches INIES&nbsp;»</em>. Pour comparer la dispersion des valeurs
+      ou élargir à l'international, l'<em>«&nbsp;Explorateur FDES/PEP International&nbsp;»</em>
+      donne plus de souplesse.
+    </p>
 
-    <p>Étapes principales :</p>
+    <h3>Étape 2 &mdash; Naviguer dans les catégories</h3>
+    <figure class="figure">
+      <img
+        src="../assets/images/vizcab-fdes/02-arborescence.png"
+        alt="Arborescence terre crue avec 8 FDES disponibles"
+        loading="lazy"
+      />
+      <figcaption>Étape 2 — L'arborescence INIES, ici pour la catégorie «&nbsp;terre crue&nbsp;».</figcaption>
+    </figure>
+    <p>
+      Tape ton matériau dans la recherche (ex. <em>«&nbsp;terre crue&nbsp;»</em>). L'arborescence
+      montre les catégories où il apparaît. Pour un mur porteur, descends dans
+      <em>Structure → Petits éléments de maçonnerie → Terre crue</em>. Tu y trouves les FDES
+      disponibles&nbsp;: adobe, BTC porteuse, BTC non porteuse, brique extrudée.
+    </p>
+
+    <h3>Étape 3 &mdash; Comparer plusieurs matériaux</h3>
+    <figure class="figure">
+      <img
+        src="../assets/images/vizcab-fdes/03-comparaison.png"
+        alt="Boîtes à moustache comparant terre crue et béton armé"
+        loading="lazy"
+      />
+      <figcaption>Étape 3 — Comparaison côte à côte de FDES par boîtes à moustache.</figcaption>
+    </figure>
+    <p>
+      Coche plusieurs FDES pour voir leurs impacts côte à côte. Le point central de chaque boîte
+      est la valeur médiane, la barre verticale montre la dispersion entre les fiches d'une même
+      catégorie. Le tableau en bas donne la valeur <strong>GWPD normalisé</strong> exacte en
+      kgCO<sub>2</sub>eq/m² &mdash; c'est l'impact carbone dynamique sur 50 ans selon la méthode RE2020.
+    </p>
+
+    <!-- ======================================================
+         Notre test sur PhITEM
+         ====================================================== -->
+    <h2>Notre test sur PhITEM&nbsp;: ce qu'on a appris</h2>
+    <p>
+      On a fait l'exercice sur la maison en terre PhITEM (Saint-Martin-d'Hères), un bureau de
+      52&nbsp;m² en BTC stabilisée ciment 7&nbsp;%, et on l'a comparée à un mur béton armé
+      équivalent. Les valeurs récupérées sur Vizcab Campus&nbsp;:
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Matériau</th>
+          <th>FDES</th>
+          <th>GWPD (kgCO<sub>2</sub>eq/m²)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Panneau béton armé (référence)</td>
+          <td>34140 &mdash; IND. MAISON BLEUE</td>
+          <td>48,85</td>
+        </tr>
+        <tr>
+          <td>BTC porteuse ~30&nbsp;cm (PhITEM)</td>
+          <td>29674 &mdash; COL. CYCLE TERRE</td>
+          <td>34,46</td>
+        </tr>
+        <tr>
+          <td>Murs en adobe (sans liant)</td>
+          <td>28898 &mdash; COL. Conf. construction terre crue</td>
+          <td>11,73</td>
+        </tr>
+        <tr>
+          <td>BTC non porteuse ~10&nbsp;cm</td>
+          <td>33551 &mdash; COL. BRIQUES TECHNIC CONCEPT</td>
+          <td>6,26</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Trois enseignements qu'on n'imaginait pas avant le test&nbsp;:</strong></p>
     <ol>
-      <li>Créer un projet et renseigner les caractéristiques du bâtiment (surface, type, localisation)</li>
-      <li>Associer les matériaux de chaque composant à une FDES dans la base INIES</li>
-      <li>Renseigner les quantités (surfaces, volumes)</li>
-      <li>Lire l'indicateur Ic_construction en kgCO2eq/m² SDP et comparer les variantes</li>
+      <li>
+        <strong>La BTC porteuse de PhITEM (34,46) est environ 30&nbsp;% moins carbonée qu'un mur
+        équivalent en béton armé (48,85).</strong> Un gain réel, mais beaucoup moins spectaculaire
+        que ce qu'on imagine en entendant <em>«&nbsp;construction en terre&nbsp;»</em>.
+      </li>
+      <li>
+        <strong>À fonction structurelle équivalente, la stabilisation au ciment coûte cher.</strong>
+        Un mur BTC porteur (34,46) émet <strong>5,5 fois plus</strong> qu'un mur BTC non porteur
+        (6,26), uniquement à cause du ciment nécessaire pour porter la charge. Le matériau
+        «&nbsp;terre&nbsp;» seul est presque neutre&nbsp;; c'est le liant qui fait grimper le score.
+      </li>
+      <li>
+        <strong>Le bénéfice carbone matériau peut être annulé par l'usage.</strong> Sur les
+        77&nbsp;m² de façade de PhITEM, le choix BTC vs béton armé économise environ
+        1&nbsp;080&nbsp;kgCO<sub>2</sub>eq. Mais une année de chauffage électrique de PhITEM
+        (186&nbsp;kWh/m²·an &times; 52&nbsp;m² &times; ~0,1&nbsp;kgCO<sub>2</sub>eq/kWh) émet
+        environ 970&nbsp;kgCO<sub>2</sub>eq. Autrement dit, le gain sur les matériaux est rattrapé
+        en un peu plus d'un an d'usage si la performance énergétique est mauvaise. C'est
+        l'illustration de la tension Ic_construction ↔ Ic_énergie au cœur de la RE2020.
+      </li>
     </ol>
 
     <!-- ======================================================
@@ -119,17 +227,20 @@
          ====================================================== -->
     <h2>Comment lire le résultat</h2>
     <p>
-      Vizcab Campus donne un indicateur en <strong>kgCO2eq/m² SDP</strong>
-      (surface de plancher). Ce qui compte en phase Esquisse, c'est moins la valeur
-      absolue que la <strong>comparaison entre variantes</strong> : est-ce qu'une
-      structure bois à la place du béton divise l'impact carbone par 2 ? Est-ce
-      que le choix de l'isolant change significativement le résultat ?
+      Le <strong>GWPD (Global Warming Potential Dynamic)</strong> est exprimé en
+      kgCO<sub>2</sub>eq par unité fonctionnelle (le m² de paroi finie dans la plupart des FDES
+      murs), sur la durée de vie de référence (souvent 50 ans). Il intègre la fabrication, le
+      transport, la mise en œuvre, l'entretien et la fin de vie.
     </p>
     <p>
-      Pour avoir un ordre de grandeur de référence : les seuils RE2020 pour
-      Ic_construction se situent entre 500 et 800 kgCO2eq/m² SDP selon le type
-      de bâtiment et la zone géographique. Ces seuils ne s'appliquent pas directement
-      au calcul Campus (qui n'est pas accrédité), mais donnent une échelle de lecture.
+      L'<strong>unité fonctionnelle (UF)</strong> est l'info à toujours vérifier sur une FDES &mdash;
+      sans elle, deux chiffres sont incomparables.
+    </p>
+    <p>
+      Trois types de FDES coexistent&nbsp;: <strong>individuelles (IND)</strong> publiées par un
+      fabricant, <strong>collectives (COL)</strong> représentant un syndicat ou un groupe de
+      fabricants, <strong>par défaut (DEF/DED)</strong> très pénalisantes utilisées quand aucune
+      FDES spécifique n'existe.
     </p>
 
     <!-- ======================================================
@@ -138,18 +249,29 @@
     <h2>Limites de cette approche</h2>
     <ul>
       <li>
-        Vizcab Campus donne un ordre de grandeur, pas une validation RE2020 officielle —
-        pour ça il faut passer à Vizcab Eval (payant, accrédité DHUP).
+        <strong>Vizcab Campus est volontairement très limité&nbsp;:</strong> pas de modélisation
+        de bâtiment complet, pas de calcul Ic_construction réglementaire. C'est un outil de
+        découverte et de comparaison de matériaux, pas de production d'études.
       </li>
       <li>
-        La précision dépend des FDES disponibles dans la base INIES pour tes matériaux.
-        Les matériaux non-conventionnels (terre crue, paille, bois non certifié)
-        sont moins bien couverts.
+        <strong>La BTC stabilisée ciment de PhITEM n'a pas de FDES dédiée&nbsp;:</strong> la
+        29674 (CYCLE TERRE) est l'approximation la plus proche, mais ne reflète pas exactement la
+        formulation 7&nbsp;% ciment de PhITEM. Pour des matériaux atypiques (terre crue de chantier,
+        paille, matériaux locaux), la couverture INIES reste lacunaire.
       </li>
       <li>
-        Le calcul couvre le carbone incorporé (Ic_construction) mais pas le volet
-        énergie (Ic_énergie) — pour ça il faut coupler avec un outil de simulation
-        thermique dynamique.
+        <strong>Les comparaisons d'épaisseur doivent être faites avec prudence.</strong> Le 33551
+        «&nbsp;non porteur 10&nbsp;cm&nbsp;» n'est pas comparable au 29674 «&nbsp;porteur 30&nbsp;cm&nbsp;»
+        à fonction égale.
+      </li>
+      <li>
+        Le calcul dynamique (GWPD) pondère moins fortement les émissions futures que la méthode
+        statique (GWP). Pour comparer avec des données internationales, c'est souvent le GWP
+        statique qui est utilisé.
+      </li>
+      <li>
+        Une vraie ACV en phase APS/APD demande un outil professionnel (Vizcab Eval, One Click LCA)
+        et une modélisation complète du bâtiment.
       </li>
     </ul>
 
@@ -159,14 +281,18 @@
     <h2>Alternatives</h2>
     <ul>
       <li>
-        <strong><a href="../outils/vizcab.html">Add-In Excel Vizcab</a></strong> —
-        même logique que Campus mais dans un tableur. Plus de flexibilité si tu
-        maîtrises Excel et que tu veux structurer ton calcul librement.
+        <strong>Add-In Excel Vizcab</strong> (gratuit) &mdash; permet d'associer des FDES à un
+        quantitatif directement dans un tableur. Plus concret pour produire un premier ordre de
+        grandeur sur un projet.
       </li>
       <li>
-        <strong><a href="../outils/vizcab.html">Vizcab Explo</a></strong> —
-        plus complet et mieux adapté à la comparaison de variantes volumétriques,
-        mais nécessite 2 à 3 jours de formation et un accès payant.
+        <strong><a href="https://www.inies.fr" target="_blank" rel="noopener">Base INIES directement</a></strong>
+        &mdash; l'accès brut aux FDES sans interface Vizcab. Plus austère mais complet.
+      </li>
+      <li>
+        <strong><a href="../outils/vizcab.html">Vizcab &mdash; offre académique</a></strong>
+        (gratuite sur demande via un responsable pédagogique de l'école) &mdash; donne accès à
+        l'outil complet pendant une période donnée pour un TD encadré.
       </li>
     </ul>
 
@@ -176,17 +302,16 @@
     <h2>Pour aller plus loin</h2>
     <ul>
       <li>
-        <a href="https://www.inies.fr" target="_blank" rel="noopener">
-          Base INIES →
-        </a> — source officielle des données environnementales des matériaux (FDES, PEP, DED)
+        <a href="https://www.inies.fr" target="_blank" rel="noopener">INIES &mdash; Le programme
+        français des FDES →</a>
       </li>
+      <li>ADEME &mdash; Guide pratique de l'ACV bâtiment</li>
+      <li>Méthode RE2020 &mdash; Documentation officielle DHUP/CSTB</li>
+      <li>Cycle Terre &mdash; Documentation technique BTC (éditeur de la FDES 29674)</li>
       <li>
         <a href="https://blog.vizcab.io/fr/tag/webinaire" target="_blank" rel="noopener">
-          Webinaires Vizcab →
-        </a> — introduction à l'ACV bâtiment
+          Webinaires Vizcab →</a>
       </li>
-      <li>Guide DHUP RE2020 — explication des indicateurs Ic_construction et Ic_énergie</li>
-      <li>Cours ENSE3 PARIN — Analyse du cycle de vie et RE2020</li>
     </ul>
 
     <!-- ======================================================
