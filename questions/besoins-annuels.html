@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox AGILE-BAT — Besoins de chauffage et de refroidissement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="site-header__logo">
+        Toolbox <span class="accent">AGILE-BAT</span>
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../esquisse.html">Esquisse</a></li>
+          <li><a href="../aps.html" aria-current="page">APS</a></li>
+          <li><a href="../outils.html">Outils</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="../index.html">Accueil</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="../aps.html">APS</a>
+    <span class="breadcrumb__sep">›</span>
+    <span class="breadcrumb__current">Besoins de chauffage et de refroidissement</span>
+  </nav>
+
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
+  <main class="site-main">
+
+    <div class="badge-list">
+      <span class="badge badge--phase">APS</span>
+      <span class="badge">Évaluer le confort et les besoins</span>
+    </div>
+    <h1>Quels seront les besoins annuels de chauffage et de refroidissement&nbsp;?</h1>
+    <p class="page-intro">
+      Ta volumétrie est figée, tes principes constructifs sont définis. Tu veux maintenant
+      chiffrer la quantité d'énergie que ton bâtiment va demander pour rester confortable
+      sur une année &mdash; combien pour le chauffage, combien pour le refroidissement.
+    </p>
+
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <p>
+      Les besoins de chauffage et de refroidissement sont l'indicateur central de la
+      <strong>performance énergétique</strong> d'un bâtiment. Ils dépendent de l'enveloppe
+      (isolation, vitrages, ponts thermiques), de l'orientation, des apports solaires et
+      internes, et du climat. C'est sur cette base que se dimensionnent ensuite les systèmes
+      (chaudière, pompe à chaleur, climatisation).
+    </p>
+    <p>
+      Attention à une distinction importante&nbsp;: les <strong>besoins</strong> sont l'énergie
+      que le bâtiment réclame à la frontière de ses pièces&nbsp;; les <strong>consommations</strong>
+      sont l'énergie réellement consommée par les équipements, qui intègrent leurs rendements.
+      Une simulation de besoins (STD) précède toujours le calcul de consommations.
+    </p>
+
+    <!-- ======================================================
+         Outil recommandé
+         ====================================================== -->
+    <h2>Outil recommandé</h2>
+    <div class="tool-card">
+      <p class="tool-card__name">Pléiades</p>
+      <p class="tool-card__meta">Windows &mdash; Licence éducation via l'établissement</p>
+      <p class="tool-card__desc">
+        Pléiades calcule les besoins de chauffage et de refroidissement heure par heure sur
+        une année complète, à partir de la modélisation du bâtiment et du fichier météo.
+        C'est l'outil de référence en France pour cet usage.
+      </p>
+      <a href="../outils/pleiades.html" class="tool-card__link">Voir la fiche Pléiades →</a>
+    </div>
+
+    <!-- ======================================================
+         Faire le test
+         ====================================================== -->
+    <h2>Faire le test&nbsp;: lire les besoins dans Pléiades</h2>
+    <ol>
+      <li>Lancer la simulation STD (<em>Calcul → Calcul des besoins</em>).</li>
+      <li>Ouvrir Pléiades Résultats.</li>
+      <li>Lire les besoins de chauffage.</li>
+      <li>Lire les températures intérieures.</li>
+      <li>Lire les apports solaires (bruts et nets).</li>
+      <li>Lire les pertes par l'enveloppe, si disponibles.</li>
+      <li>Exporter les résultats vers Excel.</li>
+      <li>Construire un tableau de synthèse clair pour présenter les résultats.</li>
+    </ol>
+
+    <div class="callout callout--pending">
+      <p class="callout__title">⏳ Tutoriel illustré en cours de finalisation</p>
+      <p>Les captures d'écran pas-à-pas et le tableau de résultats exporté seront ajoutés prochainement.</p>
+    </div>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>
+      Pléiades exprime les besoins en kWh sur l'année, que l'on ramène généralement au mètre
+      carré (<strong>kWh/m²·an</strong>) pour pouvoir comparer avec des références. À titre
+      indicatif&nbsp;: un bâtiment performant neuf vise des besoins de chauffage de l'ordre
+      de quelques dizaines de kWh/m²·an, tandis qu'un bâtiment ancien mal isolé peut dépasser
+      150 à 200&nbsp;kWh/m²·an.
+    </p>
+    <p>
+      La question à se poser n'est pas seulement «&nbsp;le chiffre est-il bas&nbsp;?&nbsp;» mais
+      <strong>«&nbsp;d'où viennent les besoins&nbsp;?&nbsp;»</strong> &mdash; les apports solaires
+      et les déperditions par l'enveloppe expliquent le résultat et indiquent les leviers
+      d'amélioration.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites de cette approche</h2>
+    <ul>
+      <li>
+        Une simulation donne des besoins sous des hypothèses d'occupation et de scénarios &mdash;
+        la consommation réelle dépendra fortement du comportement des occupants.
+      </li>
+      <li>
+        Les besoins ne sont pas les consommations&nbsp;: pour ces dernières, il faut le calcul
+        avec systèmes (rendements de chaudière, distribution, etc.).
+      </li>
+      <li>
+        La précision dépend de la qualité du modèle&nbsp;: compositions de parois, ponts
+        thermiques, étanchéité à l'air.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong>OpenStudio / EnergyPlus</strong> &mdash;
+        moteur de simulation équivalent, en open source.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li>Documentation Pléiades &mdash; module STD</li>
+      <li>ADEME &mdash; comprendre la performance énergétique des bâtiments</li>
+      <li>Méthode RE2020 &mdash; indicateurs B<sub>bio</sub> et C<sub>ep</sub></li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="u-global.html" class="page-nav__prev">← Épaisseur d'isolation</a>
+      <a href="../aps.html" class="page-nav__center">↑ Retour à APS</a>
+      <a href="ventilation.html" class="page-nav__next">Ventilation →</a>
+    </nav>
+
+  </main>
+
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
+  <footer class="site-footer">
+    <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
+  </footer>
+
+</body>
+</html>

@@ -11,6 +11,9 @@
 </head>
 <body>
 
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="site-header__logo">
@@ -27,29 +30,154 @@
     </div>
   </header>
 
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="../index.html">Accueil</a>
     <span class="breadcrumb__sep">›</span>
     <a href="../esquisse.html">Esquisse</a>
     <span class="breadcrumb__sep">›</span>
-    <span class="breadcrumb__current">Compacité</span>
+    <span class="breadcrumb__current">Compacité du bâtiment</span>
   </nav>
 
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
   <main class="site-main">
 
     <div class="badge-list">
       <span class="badge badge--phase">Esquisse</span>
       <span class="badge">Définir la volumétrie</span>
     </div>
-    <h1>Mon bâtiment est-il assez compact ?</h1>
+    <h1>Mon bâtiment est-il assez compact&nbsp;?</h1>
+    <p class="page-intro">
+      Tu travailles sur la volumétrie de ton projet et tu hésites entre plusieurs formes&nbsp;:
+      un volume compact, ou une forme plus découpée (en L, en U…). Tu veux savoir laquelle
+      limite le mieux les déperditions thermiques.
+    </p>
 
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../esquisse.html">← Retour à la phase Esquisse</a></p>
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <p>
+      La compacité d'un bâtiment est le rapport entre sa <strong>surface déperditive</strong>
+      (l'enveloppe en contact avec l'extérieur) et son <strong>volume chauffé</strong>. Plus
+      un bâtiment est compact, moins il a de surface par laquelle perdre de la chaleur, à
+      volume habitable égal.
+    </p>
+    <p>
+      Une forme en L ou en U, à surface habitable identique, présente davantage de murs
+      exposés qu'un volume cubique. Cela augmente mécaniquement les besoins de chauffage.
+      La compacité est un <strong>levier gratuit</strong>&nbsp;: elle ne coûte rien en
+      matériau ou en équipement, elle relève uniquement du dessin. C'est l'une des toutes
+      premières décisions à arbitrer en esquisse, car la forme générale est très contraignante
+      à modifier ensuite.
+    </p>
+
+    <!-- ======================================================
+         Outil recommandé
+         ====================================================== -->
+    <h2>Outil recommandé</h2>
+    <div class="tool-card">
+      <p class="tool-card__name">Pléiades</p>
+      <p class="tool-card__meta">Windows &mdash; Licence éducation via l'établissement</p>
+      <p class="tool-card__desc">
+        Une fois que tu disposes d'un modèle minimal de ton bâtiment, Pléiades permet de
+        comparer plusieurs variantes de forme en simulation thermique dynamique, et de
+        chiffrer l'écart de besoins de chauffage entre elles.
+      </p>
+      <a href="../outils/pleiades.html" class="tool-card__link">Voir la fiche Pléiades →</a>
     </div>
+    <p>
+      Pour une première approche encore plus en amont, sans modélisation thermique complète,
+      <a href="../outils/forma.html">Autodesk Forma</a> calcule directement des indicateurs
+      de surface et de volume sur une masse volumétrique.
+    </p>
+
+    <!-- ======================================================
+         Faire le test
+         ====================================================== -->
+    <h2>Faire le test&nbsp;: comparer deux formes dans Pléiades</h2>
+    <p>La méthode repose sur une règle simple&nbsp;: <strong>ne faire varier que la forme</strong>, en gardant tout le reste identique.</p>
+    <ol>
+      <li>Créer un modèle de ton bâtiment dans Pléiades. Renseigner les compositions de murs, planchers, fenêtres et portes dans l'onglet <em>Défaut</em>.</li>
+      <li>Dupliquer le modèle.</li>
+      <li>Créer la <strong>Variante A</strong>&nbsp;: forme compacte.</li>
+      <li>Créer la <strong>Variante B</strong>&nbsp;: forme en L.</li>
+      <li>Garder rigoureusement identiques&nbsp;: la surface habitable, les matériaux, et la surface totale de vitrage.</li>
+      <li>Lancer les deux simulations (<em>Calcul → Calcul des besoins</em>).</li>
+      <li>Comparer les résultats.</li>
+    </ol>
+
+    <div class="callout callout--pending">
+      <p class="callout__title">⏳ Tutoriel illustré en cours de finalisation</p>
+      <p>Les captures d'écran pas-à-pas et le tableau de résultats comparatifs seront ajoutés prochainement.</p>
+    </div>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>
+      Pléiades affiche, pour chaque variante, les besoins de chauffage annuels (en kWh ou
+      kWh/m²·an). À surface habitable égale, la variante la plus compacte présente des
+      besoins plus faibles. L'écart entre les deux chiffres donne directement le «&nbsp;coût
+      énergétique&nbsp;» du choix de forme &mdash; un argument concret pour justifier la
+      morphologie retenue.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites de cette approche</h2>
+    <ul>
+      <li>
+        La compacité n'est qu'un paramètre parmi d'autres&nbsp;: une forme moins compacte peut
+        se justifier par les apports solaires, les vues, ou l'usage. Le test isole la compacité,
+        il ne tranche pas tout.
+      </li>
+      <li>
+        À l'esquisse, les résultats sont des ordres de grandeur &mdash; les compositions de
+        parois ne sont pas encore figées.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong><a href="../outils/forma.html">Autodesk Forma</a></strong> &mdash;
+        indicateurs de surface/volume sur la volumétrie, sans simulation thermique.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li>ADEME &mdash; guides de conception bioclimatique</li>
+      <li>Documentation Pléiades &mdash; comparaison de variantes</li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="orientation.html" class="page-nav__prev">← Orientation du bâtiment</a>
+      <a href="../esquisse.html" class="page-nav__center">↑ Retour à Esquisse</a>
+      <a href="variantes-volumetrie.html" class="page-nav__next">Variantes volumétriques →</a>
+    </nav>
 
   </main>
 
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
   <footer class="site-footer">
     <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
   </footer>

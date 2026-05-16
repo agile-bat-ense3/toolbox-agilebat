@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox AGILE-BAT — Épaisseur d'isolation et U global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="site-header__logo">
+        Toolbox <span class="accent">AGILE-BAT</span>
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../esquisse.html">Esquisse</a></li>
+          <li><a href="../aps.html" aria-current="page">APS</a></li>
+          <li><a href="../outils.html">Outils</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="../index.html">Accueil</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="../aps.html">APS</a>
+    <span class="breadcrumb__sep">›</span>
+    <span class="breadcrumb__current">Épaisseur d'isolation et U global</span>
+  </nav>
+
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
+  <main class="site-main">
+
+    <div class="badge-list">
+      <span class="badge badge--phase">APS</span>
+      <span class="badge">Optimiser l'enveloppe</span>
+    </div>
+    <h1>Quelle épaisseur d'isolation choisir&nbsp;? Quel U global atteindre&nbsp;?</h1>
+    <p class="page-intro">
+      Ta volumétrie et tes principes constructifs sont définis. Tu dois maintenant arbitrer
+      l'épaisseur d'isolant de tes parois. Tu veux éviter deux écueils&nbsp;: un mur
+      sous-isolé qui laisse filer la chaleur, et un mur surdimensionné dont l'épaisseur
+      devient absurde.
+    </p>
+
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <p>
+      L'isolation est le principal levier de réduction des besoins de chauffage. Mais la
+      relation entre épaisseur d'isolant et performance n'est <strong>pas linéaire</strong>&nbsp;:
+      les premiers centimètres apportent un gain énorme, les suivants un gain de plus en plus
+      faible. Passé un certain point, ajouter de l'isolant coûte de l'argent, de l'épaisseur
+      de mur et du carbone incorporé pour un bénéfice marginal.
+    </p>
+    <p>
+      L'objectif est de trouver le <strong>point d'équilibre</strong>&nbsp;: l'épaisseur
+      au-delà de laquelle continuer à isoler n'a plus de sens. C'est typiquement une question
+      qui se traite par comparaison de variantes.
+    </p>
+
+    <!-- ======================================================
+         Outil recommandé
+         ====================================================== -->
+    <h2>Outil recommandé</h2>
+    <div class="tool-card">
+      <p class="tool-card__name">Pléiades</p>
+      <p class="tool-card__meta">Windows &mdash; Licence éducation via l'établissement</p>
+      <p class="tool-card__desc">
+        Pléiades permet de tester plusieurs compositions de parois et de chiffrer, pour
+        chacune, les besoins de chauffage du bâtiment. En traçant la courbe épaisseur
+        d'isolant / besoin de chauffage, on visualise directement le point de rendement
+        décroissant.
+      </p>
+      <a href="../outils/pleiades.html" class="tool-card__link">Voir la fiche Pléiades →</a>
+    </div>
+    <p>
+      Pour un calcul rapide du coefficient U d'une paroi seule, sans simulation du bâtiment
+      complet, <a href="../outils/ubakus.html">Ubakus</a> est plus direct.
+    </p>
+
+    <!-- ======================================================
+         Faire le test
+         ====================================================== -->
+    <h2>Faire le test&nbsp;: comparer des épaisseurs d'isolant</h2>
+    <ol>
+      <li>Ouvrir la composition du mur dans Pléiades.</li>
+      <li>Créer la <strong>Variante A</strong>&nbsp;: 10&nbsp;cm d'isolant.</li>
+      <li>Créer la <strong>Variante B</strong>&nbsp;: 15&nbsp;cm.</li>
+      <li>Créer la <strong>Variante C</strong>&nbsp;: 20&nbsp;cm.</li>
+      <li>Créer la <strong>Variante D</strong>&nbsp;: 25&nbsp;cm.</li>
+      <li>Lancer les simulations.</li>
+      <li>Tracer un graphique épaisseur d'isolant vs besoin de chauffage.</li>
+    </ol>
+
+    <div class="callout callout--pending">
+      <p class="callout__title">⏳ Tutoriel illustré en cours de finalisation</p>
+      <p>Les captures d'écran pas-à-pas et le graphique épaisseur / besoin de chauffage seront ajoutés prochainement.</p>
+    </div>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>
+      Le graphique a une forme caractéristique en <strong>courbe décroissante qui s'aplatit</strong>.
+      Les premières épaisseurs font chuter fortement les besoins&nbsp;; à partir d'un certain
+      seuil, la courbe devient presque plate &mdash; chaque centimètre supplémentaire n'apporte
+      presque plus rien.
+    </p>
+    <p>
+      Le bon choix se situe juste avant cet aplatissement&nbsp;: c'est l'épaisseur qui capture
+      l'essentiel du gain sans surdimensionner le mur. Le <strong>coefficient U global</strong>
+      de la paroi (en W/m²·K) traduit la même information&nbsp;: plus il est bas, plus la paroi
+      est isolante. La RE2020 fixe des exigences sur le U<sub>bât</sub> global du bâtiment.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites de cette approche</h2>
+    <ul>
+      <li>
+        Le test isole l'épaisseur d'isolant&nbsp;; le choix réel intègre aussi le coût, le
+        carbone incorporé de l'isolant, et l'épaisseur de mur disponible.
+      </li>
+      <li>
+        Un isolant biosourcé et un isolant minéral à épaisseur égale n'ont pas le même impact
+        carbone &mdash; voir la <a href="carbone-esquisse.html">question carbone</a>.
+      </li>
+      <li>
+        Les résultats dépendent de la qualité du reste du modèle (ponts thermiques, étanchéité).
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong><a href="../outils/ubakus.html">Ubakus</a></strong> &mdash;
+        calcul du U d'une paroi seule, très rapide, sans simuler tout le bâtiment.
+      </li>
+      <li>
+        <strong>OpenStudio / EnergyPlus</strong> &mdash;
+        équivalent open source pour la simulation complète.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li>Documentation Pléiades &mdash; compositions de parois</li>
+      <li>Méthode RE2020 &mdash; exigences sur le U<sub>bât</sub></li>
+      <li>ADEME &mdash; choisir son isolation</li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="taux-vitrage.html" class="page-nav__prev">← Taux de vitrage</a>
+      <a href="../aps.html" class="page-nav__center">↑ Retour à APS</a>
+      <a href="besoins-annuels.html" class="page-nav__next">Besoins de chauffage →</a>
+    </nav>
+
+  </main>
+
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
+  <footer class="site-footer">
+    <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
+  </footer>
+
+</body>
+</html>

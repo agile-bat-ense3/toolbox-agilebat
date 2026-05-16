@@ -277,6 +277,11 @@ a:hover {
   background: var(--color-accent-bg);
 }
 
+.callout--pending {
+  border-left-color: #b45309;
+  background: #fffbeb;
+}
+
 .callout p:last-child {
   margin-bottom: 0;
 }
