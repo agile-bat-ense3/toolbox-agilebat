@@ -11,6 +11,9 @@
 </head>
 <body>
 
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="site-header__logo">
@@ -27,6 +30,9 @@
     </div>
   </header>
 
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="../index.html">Accueil</a>
     <span class="breadcrumb__sep">›</span>
@@ -35,21 +41,173 @@
     <span class="breadcrumb__current">Vents dominants</span>
   </nav>
 
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
   <main class="site-main">
 
+    <!-- En-tête de la fiche -->
     <div class="badge-list">
       <span class="badge badge--phase">Esquisse</span>
       <span class="badge">Analyser le site et le contexte</span>
     </div>
-    <h1>Quels sont les vents dominants et comment vont-ils affecter mon projet ?</h1>
+    <h1>Quels sont les vents dominants et comment vont-ils affecter mon projet&nbsp;?</h1>
+    <p class="page-intro">
+      Tu as un terrain et tu commences à réfléchir à l'implantation de ton bâtiment. Avant de
+      figer l'orientation, l'emplacement des entrées ou la stratégie de ventilation, tu veux
+      savoir d'où vient le vent sur ton site, à quelle fréquence et avec quelle intensité.
+    </p>
 
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../esquisse.html">← Retour à la phase Esquisse</a></p>
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <p>
+      Les vents dominants influencent plusieurs choix de conception dès l'esquisse. Un vent froid
+      récurrent sur une façade augmente les déperditions thermiques&nbsp;: on évite d'y placer de
+      grandes ouvertures ou l'entrée principale. À l'inverse, une brise d'été régulière peut être
+      exploitée pour la ventilation naturelle et le rafraîchissement passif.
+    </p>
+    <p>
+      La position des entrées, des espaces tampons (sas, garage, local technique) et des ouvertures
+      de ventilation se décide en partie en fonction de la rose des vents du site.
+    </p>
+    <p>
+      À l'échelle de l'esquisse, on ne cherche pas une étude aéraulique fine &mdash; on cherche à
+      connaître la direction et la force générale des vents pour orienter intelligemment le bâtiment.
+    </p>
+
+    <!-- ======================================================
+         Outil recommandé
+         ====================================================== -->
+    <h2>Outil recommandé</h2>
+    <div class="tool-card">
+      <p class="tool-card__name">Pléiades (lecture du fichier météo)</p>
+      <p class="tool-card__meta">Windows &mdash; Licence éducation via l'établissement</p>
+      <p class="tool-card__desc">
+        Pléiades permet de visualiser la rose des vents d'une commune à partir de son fichier
+        météo. La rose des vents indique, pour chaque direction, la fréquence et l'intensité
+        des vents sur l'année. C'est une lecture rapide une fois le fichier météo chargé.
+      </p>
+      <a href="../outils/pleiades.html" class="tool-card__link">Voir la fiche Pléiades →</a>
     </div>
+
+    <!-- ======================================================
+         Faire le test : lire la rose des vents
+         ====================================================== -->
+    <h2>Faire le test&nbsp;: lire la rose des vents</h2>
+
+    <h3>1. Télécharger le fichier météo</h3>
+    <p>
+      Va sur <a href="https://climate.onebuilding.org" target="_blank" rel="noopener">climate.onebuilding.org</a>,
+      choisis la région (Europe), le pays, puis la ville la plus proche de ton terrain.
+      Télécharge le fichier zip contenant le fichier <code>.epw</code>.
+    </p>
+
+    <h3>2. Charger le fichier dans Pléiades</h3>
+    <p>
+      Ouvre Pléiades Modeleur, et dans <em>STD / Météo</em>, ajoute le fichier météo de la
+      ville voulue.
+    </p>
+
+    <h3>3. Lire l'onglet Vent</h3>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/vent-grenoble.png"
+        alt="Rose des vents de Grenoble dans Pléiades"
+        loading="lazy"
+      />
+      <figcaption>Rose des vents annuelle de Grenoble lue dans Pléiades — les couleurs indiquent l'intensité selon l'échelle de Beaufort.</figcaption>
+    </figure>
+    <p>
+      L'onglet <em>Vent</em> affiche un tableau mensuel (vitesse moyenne, vitesse max,
+      orientation dominante) et une rose des vents annuelle. Chaque branche de la rose indique
+      la fréquence des vents venant de cette direction&nbsp;; les couleurs indiquent l'intensité
+      selon l'échelle de Beaufort.
+    </p>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>
+      Sur l'exemple de Grenoble, la rose des vents montre que les vents dominants viennent du
+      <strong>nord-nord-ouest (NNO)</strong> la majeure partie de l'année, avec une bascule vers
+      le <strong>sud-est (SE/ESE)</strong> en automne. Les vitesses sont faibles&nbsp;: moyenne
+      annuelle autour de 1,4&nbsp;m/s, maximum 4&nbsp;m/s. La majorité des heures sont classées
+      en «&nbsp;très légère brise&nbsp;» ou «&nbsp;légère brise&nbsp;».
+    </p>
+    <p>
+      Ce qu'on en tire pour la conception&nbsp;: à Grenoble, le vent est peu énergique, donc son
+      rôle est plus important pour le <strong>confort d'été</strong> (ventilation naturelle
+      possible) que comme contrainte de déperdition. Si on plaçait une grande façade vitrée, on
+      éviterait néanmoins de l'exposer plein NNO sans protection.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites de cette approche</h2>
+    <ul>
+      <li>
+        La rose des vents du fichier météo donne le vent à l'échelle de la commune (souvent
+        mesuré à un aéroport ou une station météo) &mdash; elle ne tient pas compte des effets
+        locaux&nbsp;: relief, bâtiments voisins, effet de couloir entre constructions.
+      </li>
+      <li>
+        Pour une analyse fine du vent autour du bâtiment (zones de surpression, de turbulence,
+        confort piéton), il faut une étude CFD, hors de portée de Pléiades.
+      </li>
+      <li>
+        Les fichiers météo représentent une année type &mdash; ils ne reflètent pas les
+        événements extrêmes.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong><a href="../outils/forma.html">Autodesk Forma</a></strong> &mdash;
+        propose une analyse de vent directement sur la volumétrie modélisée du projet,
+        plus visuelle pour l'esquisse.
+      </li>
+      <li>
+        <strong>Climate Consultant</strong> &mdash;
+        lit le même fichier météo EPW et affiche la rose des vents parmi d'autres analyses
+        climatiques. Gratuit, disponible sur tous OS.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li>
+        <a href="https://climate.onebuilding.org" target="_blank" rel="noopener">
+          climate.onebuilding.org →</a> — source des fichiers météo EPW
+      </li>
+      <li>Documentation Pléiades &mdash; module météo (IZUBA énergies)</li>
+      <li>ADEME &mdash; guides de conception bioclimatique</li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="masques-solaires.html" class="page-nav__prev">← Masques solaires</a>
+      <a href="../esquisse.html" class="page-nav__center">↑ Retour à Esquisse</a>
+      <a href="strategie-climatique.html" class="page-nav__next">Stratégie climatique →</a>
+    </nav>
 
   </main>
 
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
   <footer class="site-footer">
     <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
   </footer>

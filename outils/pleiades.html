@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toolbox AGILE-BAT — Pleiades</title>
+  <title>Toolbox AGILE-BAT — Pléiades</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -11,6 +11,9 @@
 </head>
 <body>
 
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="site-header__logo">
@@ -27,28 +30,279 @@
     </div>
   </header>
 
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="../index.html">Accueil</a>
     <span class="breadcrumb__sep">›</span>
     <a href="../outils.html">Outils</a>
     <span class="breadcrumb__sep">›</span>
-    <span class="breadcrumb__current">Pleiades</span>
+    <span class="breadcrumb__current">Pléiades</span>
   </nav>
 
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
   <main class="site-main">
 
+    <!-- En-tête de la fiche -->
     <div class="badge-list">
       <span class="badge badge--phase">APS</span>
     </div>
-    <h1>Pleiades</h1>
+    <h1>Pléiades</h1>
 
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../outils.html">← Retour à la liste des outils</a></p>
+    <!-- ======================================================
+         Bloc identité
+         ====================================================== -->
+    <div class="tool-identity">
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Éditeur</span>
+        <span class="tool-identity__value">IZUBA énergies</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Type</span>
+        <span class="tool-identity__value">Logiciel desktop</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Plateforme</span>
+        <span class="tool-identity__value">Windows uniquement</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Tarif</span>
+        <span class="tool-identity__value">Payant &mdash; licence éducation disponible pour les écoles</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Site officiel</span>
+        <span class="tool-identity__value">
+          <a href="https://www.izuba.fr/logiciels/outils-logiciels/" target="_blank" rel="noopener">izuba.fr →</a>
+        </span>
+      </div>
     </div>
+
+    <!-- ======================================================
+         À quoi ça sert
+         ====================================================== -->
+    <h2>À quoi ça sert</h2>
+    <p>
+      Pléiades est le logiciel de référence en France pour la <strong>simulation thermique
+      dynamique (STD)</strong> des bâtiments. Il permet de modéliser un bâtiment, de lui
+      attribuer des compositions de parois, des scénarios d'occupation et des systèmes, puis
+      de simuler heure par heure son comportement thermique sur une année complète.
+    </p>
+    <p>
+      Pléiades produit les besoins de chauffage et de refroidissement, les températures
+      intérieures, le confort d'été, et peut générer les indicateurs réglementaires RE2020.
+      Il est largement utilisé dans les bureaux d'études thermiques français, et dispose
+      d'un module ACV / carbone pour les projets qui le nécessitent.
+    </p>
+
+    <!-- ======================================================
+         Quand l'utiliser dans cette toolbox
+         ====================================================== -->
+    <h2>Quand l'utiliser dans cette toolbox</h2>
+    <p>
+      Pléiades demande un niveau de détail — géométrie figée, compositions de parois
+      définies, hypothèses d'occupation — qui n'est disponible qu'à partir de l'avant-projet
+      sommaire. Ce n'est pas un outil d'esquisse pure.
+    </p>
+    <p>Pléiades répond aux questions suivantes de la toolbox :</p>
+    <ul>
+      <li><a href="../questions/vents-dominants.html">Quels sont les vents dominants et comment affectent-ils mon projet ?</a></li>
+      <li><a href="../questions/compacite.html">Mon bâtiment est-il assez compact ?</a></li>
+      <li><a href="../questions/orientation.html">Quelle orientation donner à mon bâtiment ?</a></li>
+      <li><a href="../questions/besoins-annuels.html">Quels seront les besoins annuels de chauffage et de refroidissement ?</a></li>
+      <li><a href="../questions/u-global.html">Quelle épaisseur d'isolation choisir ?</a></li>
+      <li><a href="../questions/surchauffe.html">Mon bâtiment risque-t-il de surchauffer en été ?</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Prise en main
+         ====================================================== -->
+    <h2>Prise en main</h2>
+    <p>
+      Pléiades demande un investissement réel &mdash; compter <strong>plusieurs jours</strong>
+      pour être autonome sur un modèle simple. L'interface est en français, dense mais structurée.
+      La logique générale&nbsp;: on crée un modèle (plan, niveaux), on renseigne les compositions
+      par défaut des parois dans l'onglet <em>Défaut</em>, on insère les ouvertures, on paramètre
+      le calcul STD, puis on lance la simulation et on lit les résultats.
+    </p>
+    <div class="callout callout--info">
+      <p>
+        L'accès étudiant passe par la <strong>licence éducation de l'établissement</strong> &mdash;
+        à demander via ton responsable pédagogique. Il n'existe pas d'accès individuel gratuit.
+      </p>
+    </div>
+
+    <h3>Étapes générales d'une simulation</h3>
+
+    <h4>1. Le fichier météo</h4>
+    <p>
+      Télécharger le fichier météo de la commune sur
+      <a href="https://climate.onebuilding.org" target="_blank" rel="noopener">climate.onebuilding.org</a>,
+      puis l'ajouter dans Pléiades Modeleur via <em>STD / Météo</em>. Le fichier contient
+      température extérieure, rayonnement solaire, humidité et vent.
+    </p>
+
+    <h4>2. La modélisation</h4>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/caracteristiques.png"
+        alt="Onglet Caractéristiques du modèle dans Pléiades"
+        loading="lazy"
+      />
+      <figcaption>Paramétrage des caractéristiques générales du modèle.</figcaption>
+    </figure>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/Compo%20murs.png"
+        alt="Compositions de parois dans Pléiades"
+        loading="lazy"
+      />
+      <figcaption>Renseignement des compositions de parois (murs, planchers, toiture) dans l'onglet Défaut.</figcaption>
+    </figure>
+    <p>
+      Tracer le plan du bâtiment, gérer les niveaux, puis renseigner dans l'onglet <em>Défaut</em>
+      les compositions des parois et les ponts thermiques.
+    </p>
+
+    <h4>3. Les ouvertures</h4>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/fenetres%20porte.png"
+        alt="Insertion des fenêtres et portes dans Pléiades"
+        loading="lazy"
+      />
+      <figcaption>Insertion des fenêtres et portes avec leurs dimensions, allège, retrait et ponts thermiques.</figcaption>
+    </figure>
+
+    <h4>4. Le calcul</h4>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/calculs.png"
+        alt="Onglet Calcul dans Pléiades"
+        loading="lazy"
+      />
+      <figcaption>Paramétrage de la simulation : période, pas de temps, gains internes, puis lancement du calcul STD.</figcaption>
+    </figure>
+    <p>
+      Dans l'onglet <em>Calcul</em>, paramétrer la simulation (période, pas de temps, limites de
+      confort, gains internes), puis lancer le <em>Calcul des besoins</em> (STD) ou le
+      <em>Calcul des consommations</em> (avec systèmes).
+    </p>
+
+    <h4>5. Les résultats</h4>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/r%C3%A9sultats.png"
+        alt="Tableau de résultats dans Pléiades"
+        loading="lazy"
+      />
+      <figcaption>Lecture des résultats : besoins, températures, apports solaires. Export vers Excel possible.</figcaption>
+    </figure>
+    <p>
+      Pléiades Résultats donne les besoins annuels, les apports solaires, les courbes de
+      températures intérieures, les données de rayonnement et d'humidité. Les résultats sont
+      exportables vers Excel pour produire des tableaux ou graphiques de comparaison.
+    </p>
+
+    <!-- ======================================================
+         Méthode : comparer des variantes
+         ====================================================== -->
+    <h2>Méthode&nbsp;: comparer des variantes</h2>
+    <p>
+      Pléiades est particulièrement utile pour arbitrer entre plusieurs options de conception.
+      La règle d'or&nbsp;: <strong>ne faire varier qu'un seul paramètre à la fois</strong>,
+      en gardant identiques la surface de plancher, la météo, l'occupation, le chauffage et la
+      ventilation. On duplique le modèle, on crée la variante, on relance, et on compare.
+      C'est cette démarche comparative qui fait la valeur de l'outil en phase de conception.
+    </p>
+
+    <!-- ======================================================
+         Ce que Pléiades fait bien / ne fait pas
+         ====================================================== -->
+    <h2>Ce que Pléiades fait bien</h2>
+    <ul>
+      <li>Géométrie et zonage thermique</li>
+      <li>Compositions d'enveloppe et inertie thermique</li>
+      <li>Apports solaires à travers les vitrages</li>
+      <li>Masques proches et ombrage</li>
+      <li>Scénarios d'occupation et gains internes</li>
+      <li>Besoins de chauffage et de refroidissement</li>
+      <li>Températures intérieures et confort d'été</li>
+      <li>Comparaison de variantes (orientation, vitrage, isolation)</li>
+      <li>Indicateurs RE2020 et contribution photovoltaïque</li>
+      <li>ACV / carbone si le module est disponible</li>
+    </ul>
+
+    <h2>Ce que Pléiades ne fait pas (ou pas bien)</h2>
+    <ul>
+      <li>Analyse fine de l'horizon montagneux ou du relief (SIG)</li>
+      <li>Confort au vent détaillé autour des bâtiments</li>
+      <li>Prédiction d'écoulement d'air en CFD</li>
+      <li>Simulation d'îlot de chaleur urbain</li>
+      <li>Microclimat végétation / cours d'eau</li>
+      <li>Autonomie en lumière du jour et éblouissement détaillés</li>
+      <li>Vérification Passivhaus certifiée</li>
+      <li>Calepinage photovoltaïque et dimensionnement des onduleurs</li>
+      <li>Transfert hygrothermique complet dans les matériaux en terre</li>
+      <li>Analyse structurelle</li>
+    </ul>
+
+    <!-- ======================================================
+         Forces et Limites
+         ====================================================== -->
+    <h2>Forces et limites</h2>
+    <div class="two-cols">
+
+      <div>
+        <h3>Forces</h3>
+        <ul>
+          <li>Référence française reconnue, conforme à la méthode RE2020</li>
+          <li>Couvre tout le spectre STD&nbsp;: besoins, confort, RE2020, ACV</li>
+          <li>Excellent pour la comparaison de variantes</li>
+          <li>Interface et documentation entièrement en français</li>
+          <li>Licence éducation disponible pour les écoles</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Limites</h3>
+        <ul>
+          <li>Payant &mdash; accès étudiant uniquement via licence établissement</li>
+          <li>Windows uniquement</li>
+          <li>Courbe d'apprentissage réelle &mdash; plusieurs jours pour l'autonomie</li>
+          <li>Non adapté à l'esquisse pure (géométrie figée requise)</li>
+          <li>Ne couvre pas la CFD, le microclimat fin, ni le transfert hygrothermique complet dans les matériaux en terre</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ======================================================
+         Ressources
+         ====================================================== -->
+    <h2>Ressources</h2>
+    <ul>
+      <li><a href="https://www.izuba.fr" target="_blank" rel="noopener">Site officiel IZUBA énergies →</a></li>
+      <li><a href="https://climate.onebuilding.org" target="_blank" rel="noopener">Fichiers météo EPW — climate.onebuilding.org →</a></li>
+      <li>Documentation et formations IZUBA (disponibles sur le site officiel)</li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation">
+      <span></span>
+      <a href="../outils.html" class="page-nav__center">← Retour à la liste des outils</a>
+      <span></span>
+    </nav>
 
   </main>
 
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
   <footer class="site-footer">
     <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
   </footer>
