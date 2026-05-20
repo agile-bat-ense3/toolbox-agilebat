@@ -98,37 +98,135 @@
     <!-- ======================================================
          Faire le test
          ====================================================== -->
-    <h2>Faire le test&nbsp;: comparer des épaisseurs d'isolant</h2>
-    <ol>
-      <li>Ouvrir la composition du mur dans Pléiades.</li>
-      <li>Créer la <strong>Variante A</strong>&nbsp;: 10&nbsp;cm d'isolant.</li>
-      <li>Créer la <strong>Variante B</strong>&nbsp;: 15&nbsp;cm.</li>
-      <li>Créer la <strong>Variante C</strong>&nbsp;: 20&nbsp;cm.</li>
-      <li>Créer la <strong>Variante D</strong>&nbsp;: 25&nbsp;cm.</li>
-      <li>Lancer les simulations.</li>
-      <li>Tracer un graphique épaisseur d'isolant vs besoin de chauffage.</li>
-    </ol>
+    <h2>Faire le test&nbsp;: comparer 4 épaisseurs d'isolant sur la Smart House</h2>
+    <p>
+      L'exemple ci-dessous a été réalisé sur un modèle Pléiades de la Smart House du G2Elab,
+      en ne faisant varier que l'épaisseur du polystyrène expansé entre 10 et 25&nbsp;cm.
+    </p>
 
-    <div class="callout callout--pending">
-      <p class="callout__title">⏳ Tutoriel illustré en cours de finalisation</p>
-      <p>Les captures d'écran pas-à-pas et le graphique épaisseur / besoin de chauffage seront ajoutés prochainement.</p>
-    </div>
+    <h3>Étape 1 — Modéliser la géométrie</h3>
+    <p>
+      On commence par construire le modèle géométrique du bâtiment dans Pléiades, en respectant
+      les niveaux (RDC, 1er étage, combles) et les volumes habitables.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/u-global/g%C3%A9om%C3%A9trie.png"
+        alt="Géométrie du modèle Smart House dans Pléiades"
+        loading="lazy"
+      />
+      <figcaption>Géométrie du modèle Smart House dans Pléiades.</figcaption>
+    </figure>
+
+    <h3>Étape 2 — Définir la composition de référence du mur</h3>
+    <p>
+      Dans la bibliothèque, on définit le mur extérieur de référence. Ici, paroi «&nbsp;Béton plein&nbsp;+&nbsp;LV&nbsp;»
+      composée d'enduit extérieur (1,5&nbsp;cm) + béton lourd (20&nbsp;cm) + polystyrène expansé (10&nbsp;cm)
+      + placoplâtre BA13 (1,3&nbsp;cm).
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/u-global/composition%20murs.png"
+        alt="Composition du mur de référence avec polystyrène 10 cm"
+        loading="lazy"
+      />
+      <figcaption>Composition du mur de référence dans la bibliothèque Pléiades.</figcaption>
+    </figure>
+
+    <h3>Étape 3 — Créer les variantes</h3>
+    <p>
+      On duplique le modèle Pléiades pour chaque variante d'épaisseur d'isolant à tester&nbsp;:
+      10&nbsp;cm (base), 15&nbsp;cm, 20&nbsp;cm, 25&nbsp;cm. Seule l'épaisseur du polystyrène change
+      d'un fichier à l'autre — tout le reste (géométrie, autres parois, scénarios, météo) est
+      strictement identique.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/u-global/diff%C3%A9rents%20isolants.png"
+        alt="Quatre fichiers Pléiades : un par épaisseur d'isolant testée"
+        loading="lazy"
+      />
+      <figcaption>Quatre fichiers Pléiades&nbsp;: un par épaisseur d'isolant testée.</figcaption>
+    </figure>
+
+    <h3>Étape 4 — Lancer les simulations et exporter les résultats</h3>
+    <p>
+      Pour chaque variante, on lance le calcul des besoins (<em>Calcul → Calcul des besoins</em>),
+      puis on exporte les résultats vers Excel pour consolidation.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/u-global/export%20vers%20excel.png"
+        alt="Résultats Pléiades exportés vers Excel"
+        loading="lazy"
+      />
+      <figcaption>Export des résultats Pléiades vers Excel pour chaque variante.</figcaption>
+    </figure>
+
+    <h3>Étape 5 — Tracer la courbe épaisseur / besoin de chauffage</h3>
+    <p>
+      On regroupe les 4 résultats dans un même tableau et on trace la courbe.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/pleiades/u-global/resultats.png"
+        alt="Tableau et courbe : besoins de chauffage en fonction de l'épaisseur d'isolant"
+        loading="lazy"
+      />
+      <figcaption>Besoins de chauffage en fonction de l'épaisseur d'isolant — la courbe s'aplatit après 20&nbsp;cm.</figcaption>
+    </figure>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Épaisseur isolant</th>
+          <th>Besoin chauffage</th>
+          <th>Gain vs précédent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>10&nbsp;cm</td><td>12&nbsp;463&nbsp;kWh</td><td>—</td></tr>
+        <tr><td>15&nbsp;cm</td><td>11&nbsp;475&nbsp;kWh</td><td>−988&nbsp;kWh</td></tr>
+        <tr><td>20&nbsp;cm</td><td>10&nbsp;952&nbsp;kWh</td><td>−524&nbsp;kWh</td></tr>
+        <tr><td>25&nbsp;cm</td><td>10&nbsp;628&nbsp;kWh</td><td>−324&nbsp;kWh</td></tr>
+      </tbody>
+    </table>
 
     <!-- ======================================================
          Comment lire le résultat
          ====================================================== -->
     <h2>Comment lire le résultat</h2>
     <p>
-      Le graphique a une forme caractéristique en <strong>courbe décroissante qui s'aplatit</strong>.
-      Les premières épaisseurs font chuter fortement les besoins&nbsp;; à partir d'un certain
-      seuil, la courbe devient presque plate &mdash; chaque centimètre supplémentaire n'apporte
-      presque plus rien.
+      La courbe a une forme caractéristique en <strong>décroissante qui s'aplatit</strong>.
+      Les premiers centimètres font chuter fortement les besoins (passer de 10 à 15&nbsp;cm
+      économise environ 1&nbsp;000&nbsp;kWh par an sur ce modèle), puis chaque centimètre
+      supplémentaire apporte de moins en moins (entre 20 et 25&nbsp;cm, on ne gagne plus
+      que 324&nbsp;kWh).
     </p>
     <p>
-      Le bon choix se situe juste avant cet aplatissement&nbsp;: c'est l'épaisseur qui capture
-      l'essentiel du gain sans surdimensionner le mur. Le <strong>coefficient U global</strong>
-      de la paroi (en W/m²·K) traduit la même information&nbsp;: plus il est bas, plus la paroi
-      est isolante. La RE2020 fixe des exigences sur le U<sub>bât</sub> global du bâtiment.
+      Le bon choix se situe <strong>juste avant cet aplatissement</strong>&nbsp;: c'est
+      l'épaisseur qui capture l'essentiel du gain thermique sans surdimensionner. Sur cet
+      exemple, le passage de 15 à 20&nbsp;cm reste rentable thermiquement, mais au-delà
+      l'arbitrage doit intégrer d'autres critères&nbsp;: coût, carbone incorporé, épaisseur
+      disponible, exigences réglementaires.
+    </p>
+    <p>
+      Le <strong>coefficient U global</strong> de la paroi (en W/m²·K) traduit la même
+      information&nbsp;: plus il est bas, plus la paroi est isolante. La RE2020 fixe des
+      exigences sur le U<sub>bât</sub> global du bâtiment.
+    </p>
+
+    <!-- ======================================================
+         Le bon réflexe
+         ====================================================== -->
+    <h2>Le bon réflexe</h2>
+    <p>
+      Le bon réflexe n'est pas de chercher directement «&nbsp;la bonne épaisseur&nbsp;», mais de
+      <strong>comparer plusieurs variantes</strong>. Le choix pertinent est généralement celui qui
+      permet de capter l'essentiel du gain thermique avant que la courbe des besoins de chauffage
+      ne s'aplatisse. Au-delà, l'isolant supplémentaire apporte peu de bénéfice énergétique et
+      doit être justifié par d'autres critères&nbsp;: <strong>coût, carbone, confort ou
+      réglementation</strong>.
     </p>
 
     <!-- ======================================================
@@ -145,7 +243,14 @@
         carbone &mdash; voir la <a href="carbone-esquisse.html">question carbone</a>.
       </li>
       <li>
-        Les résultats dépendent de la qualité du reste du modèle (ponts thermiques, étanchéité).
+        Les résultats dépendent de la qualité du reste du modèle (ponts thermiques, étanchéité
+        à l'air, scénarios d'occupation).
+      </li>
+      <li>
+        Sur l'exemple Smart House&nbsp;: le bâtiment n'a pas pu être calibré sur ses mesures
+        réelles (données géométriques incomplètes dans le dataset). Les chiffres absolus sont
+        donc indicatifs&nbsp;; la <strong>forme de la courbe</strong> et la démarche comparative
+        restent valides.
       </li>
     </ul>
 
