@@ -50,13 +50,240 @@
       <span class="badge badge--phase">Esquisse</span>
       <span class="badge">Analyser le site et le contexte</span>
     </div>
-    <h1>Quelle est la course du soleil sur mon terrain ?</h1>
+    <h1>Quelle est la course du soleil sur mon terrain au cours de l'année&nbsp;?</h1>
+    <p class="page-intro">
+      Tu as un terrain et tu commences à réfléchir à l'implantation de ton bâtiment. Avant
+      toute décision d'orientation ou de volumétrie, tu veux comprendre comment le soleil
+      se déplace autour de ton site selon les saisons, et à quelles heures il éclaire telle
+      ou telle façade.
+    </p>
 
-    <!-- Fiche en cours de rédaction -->
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../esquisse.html">← Retour à la phase Esquisse</a></p>
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <p>
+      Le soleil ne se lève pas exactement à l'est et ne se couche pas exactement à l'ouest.
+      Sa trajectoire change radicalement selon la saison&nbsp;: en hiver, le soleil reste bas
+      sur l'horizon et décrit un arc court au sud&nbsp;; en été, il monte très haut et passe
+      presque au nord en début et fin de journée.
+    </p>
+    <p>
+      Cette différence a des conséquences directes sur la conception. Un bâtiment orienté sud
+      avec de grandes baies vitrées capte beaucoup de chaleur en hiver (soleil bas qui entre
+      loin dans la pièce) et peut être facilement protégé en été par un simple débord de toiture
+      (soleil haut qui ne rentre plus). Une grande façade ouest, en revanche, reçoit le soleil
+      en fin d'après-midi en été quand le bâtiment est déjà chaud &mdash; c'est la principale
+      cause de surchauffe.
+    </p>
+    <p>
+      Comprendre la course du soleil sur ton terrain spécifique est le <strong>premier geste
+      de conception bioclimatique</strong>.
+    </p>
+
+    <!-- ======================================================
+         Outil recommandé
+         ====================================================== -->
+    <h2>Outil recommandé</h2>
+    <div class="tool-card">
+      <p class="tool-card__name">Sunearthtools</p>
+      <p class="tool-card__meta">Web &mdash; Gratuit, sans installation</p>
+      <p class="tool-card__desc">
+        Sunearthtools génère en quelques secondes le diagramme solaire pour n'importe quelle
+        coordonnée GPS dans le monde. Il affiche la trajectoire du soleil au fil des heures
+        et des saisons, l'azimut et la hauteur solaire à chaque moment de l'année, et les
+        heures de lever et de coucher par date. C'est l'outil le plus rapide et le plus
+        accessible pour avoir cette information à l'esquisse, sans aucune modélisation préalable.
+      </p>
+      <a href="../outils/sunearthtools.html" class="tool-card__link">Voir la fiche Sunearthtools →</a>
     </div>
+    <p>
+      Pour aller plus loin avec une modélisation de ton bâtiment sur le terrain,
+      <a href="../outils/forma.html">Autodesk Forma</a> intègre une analyse d'ensoleillement
+      par façade directement sur ta volumétrie.
+    </p>
+
+    <!-- ======================================================
+         Faire le test
+         ====================================================== -->
+    <h2>Faire le test&nbsp;: la course du soleil sur PhITEM</h2>
+    <p>
+      L'exemple ci-dessous a été réalisé sur les coordonnées de la maison PhITEM à
+      Saint-Martin-d'Hères (45.1907&nbsp;N, 5.7667&nbsp;E).
+    </p>
+
+    <h3>Étape 1 — Renseigner ton terrain</h3>
+    <p>
+      Sur la page Sunearthtools, renseigne les coordonnées GPS de ton terrain et l'année voulue.
+      Le pas (<em>step</em>) règle la précision du tableau horaire &mdash; 60&nbsp;minutes est
+      suffisant pour une lecture en phase esquisse.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/sunearthtools/01-parametres.png"
+        alt="Saisie des coordonnées GPS sur Sunearthtools"
+        loading="lazy"
+      />
+      <figcaption>Saisie des coordonnées GPS de PhITEM et paramétrage du pas horaire sur Sunearthtools.</figcaption>
+    </figure>
+
+    <h3>Étape 2 — Lire le diagramme solaire annuel</h3>
+    <p>
+      Sunearthtools affiche un diagramme cartésien superposant les trajectoires des principaux
+      jours de l'année. C'est la vue la plus pédagogique&nbsp;: en un seul coup d'œil, on voit
+      l'écart entre les saisons.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/sunearthtools/02-diagramme-annuel.png"
+        alt="Diagramme solaire annuel de PhITEM, vue cartésienne"
+        loading="lazy"
+      />
+      <figcaption>Diagramme solaire annuel de PhITEM — axe horizontal&nbsp;: azimut (180° = sud)&nbsp;; axe vertical&nbsp;: élévation.</figcaption>
+    </figure>
+    <p>
+      Sur ce diagramme, l'axe horizontal est l'azimut (orientation, 180°&nbsp;= sud) et l'axe
+      vertical est l'élévation (hauteur du soleil au-dessus de l'horizon). Chaque courbe
+      représente la trajectoire du soleil un jour précis&nbsp;:
+    </p>
+    <ul>
+      <li><strong>Courbe haute</strong>&nbsp;: solstice de juin (21/06), hauteur maximale à midi ≈ <strong>68°</strong></li>
+      <li><strong>Courbe basse</strong>&nbsp;: solstice de décembre (21/12), hauteur maximale à midi ≈ <strong>22°</strong></li>
+      <li>Les courbes intermédiaires couvrent les mois et les équinoxes</li>
+    </ul>
+
+    <h3>Étape 3 — Visualiser la trajectoire en vue polaire</h3>
+    <p>
+      La vue polaire (vue du ciel depuis ton terrain) est complémentaire&nbsp;: elle montre les
+      directions de lever et de coucher du soleil selon les saisons.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/sunearthtools/03-vue-polaire.png"
+        alt="Diagramme solaire annuel de PhITEM, vue polaire"
+        loading="lazy"
+      />
+      <figcaption>Vue polaire du diagramme solaire de PhITEM — les arcs montrent les directions de lever et coucher selon les saisons.</figcaption>
+    </figure>
+    <p>
+      À la lecture, on voit qu'au <strong>solstice de juin</strong> le soleil se lève au
+      nord-est (azimut ≈&nbsp;55°) et se couche au nord-ouest (azimut ≈&nbsp;305°), tandis
+      qu'au <strong>solstice de décembre</strong> il se lève au sud-est (azimut ≈&nbsp;125°)
+      et se couche au sud-ouest (azimut ≈&nbsp;235°). La différence d'amplitude est considérable.
+    </p>
+
+    <h3>Étape 4 — Récupérer les valeurs précises</h3>
+    <p>
+      Sunearthtools fournit également un tableau de position du soleil avec les heures de lever
+      et de coucher, les angles d'azimut correspondants, et le moment du midi solaire. C'est
+      utile pour calculer des ombres portées ou dimensionner un débord de toiture.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/sunearthtools/04-tableau-position.png"
+        alt="Tableau de position du soleil et crépuscules sur Sunearthtools"
+        loading="lazy"
+      />
+      <figcaption>Tableau de position du soleil, heures de lever/coucher et crépuscules pour PhITEM.</figcaption>
+    </figure>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>
+      Les deux valeurs-clés à retenir pour ton projet sont la <strong>hauteur solaire maximale</strong>
+      et l'<strong>amplitude de l'arc</strong>.
+    </p>
+    <p><strong>Hauteur solaire maximale</strong> (angle du soleil au midi solaire)&nbsp;:</p>
+    <ul>
+      <li>
+        En hiver à Grenoble, environ <strong>22°</strong> &mdash; le soleil est bas, les rayons
+        pénètrent loin dans les pièces côté sud. C'est ce qu'on cherche pour les apports solaires passifs.
+      </li>
+      <li>
+        En été à Grenoble, environ <strong>68°</strong> &mdash; le soleil est très haut, un débord
+        de toiture de 50 à 60&nbsp;cm suffit à couper les apports directs en façade sud.
+      </li>
+    </ul>
+    <p><strong>Heures de lever et coucher selon l'orientation</strong>&nbsp;:</p>
+    <ul>
+      <li>Une façade nord ne reçoit le soleil <strong>qu'en été</strong> (le soleil «&nbsp;passe&nbsp;» au nord en début et fin de journée d'été)</li>
+      <li>Une façade est reçoit le soleil le matin, une façade ouest l'après-midi</li>
+    </ul>
+    <p>
+      Le contraste entre les deux solstices est le fondement de la conception bioclimatique&nbsp;:
+      on capte en hiver, on protège en été.
+    </p>
+
+    <!-- ======================================================
+         Bonus
+         ====================================================== -->
+    <h2>Bonus&nbsp;: calcul de l'ombre portée</h2>
+    <p>
+      Sunearthtools propose un module qui calcule la longueur d'ombre portée par un obstacle
+      vertical, à partir de sa hauteur et de l'élévation solaire. Utile pour vérifier qu'un
+      bâtiment voisin n'ombrage pas ta façade sud, ou pour dimensionner l'écart entre deux
+      bâtiments en plan masse.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites</h2>
+    <ul>
+      <li>
+        Sunearthtools donne la trajectoire <strong>théorique</strong> du soleil &mdash; il ne
+        prend pas en compte les masques solaires de l'environnement (bâtiments voisins, relief,
+        végétation). Pour évaluer les masques, il faut passer sur
+        <a href="../outils/forma.html">Forma</a>.
+      </li>
+      <li>
+        Pas de visualisation en 3D sur ton bâtiment&nbsp;: le diagramme est abstrait. Pour voir
+        l'ensoleillement sur tes façades, utilise <a href="../outils/forma.html">Forma</a>.
+      </li>
+      <li>
+        Les données sont pour un ciel dégagé &mdash; pas de prise en compte de la météo locale
+        (couverture nuageuse typique, enneigement).
+      </li>
+      <li>L'interface est en anglais et un peu datée.</li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong><a href="../outils/forma.html">Autodesk Forma</a></strong> &mdash;
+        intègre la course du soleil directement sur la volumétrie modélisée, donne le nombre
+        d'heures d'ensoleillement par façade. Plus riche mais demande de modéliser le bâtiment.
+      </li>
+      <li>
+        <strong>Climate Consultant</strong> &mdash;
+        lit un fichier météo EPW et propose des analyses solaires plus poussées, notamment les
+        radiations globales par orientation.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li>ADEME &mdash; Guide «&nbsp;Concevoir bioclimatique&nbsp;»</li>
+      <li>Cours ENSE3 PARIN &mdash; Architecture bioclimatique</li>
+      <li>Documentation Autodesk Forma &mdash; module Sun hours analysis</li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="../esquisse.html" class="page-nav__prev">← Retour à Esquisse</a>
+      <a href="../esquisse.html" class="page-nav__center">↑ Retour à Esquisse</a>
+      <a href="masques-solaires.html" class="page-nav__next">Masques solaires →</a>
+    </nav>
 
   </main>
 
