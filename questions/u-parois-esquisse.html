@@ -11,6 +11,9 @@
 </head>
 <body>
 
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="site-header__logo">
@@ -27,6 +30,9 @@
     </div>
   </header>
 
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="../index.html">Accueil</a>
     <span class="breadcrumb__sep">›</span>
@@ -35,21 +41,271 @@
     <span class="breadcrumb__current">U des parois — RE2020</span>
   </nav>
 
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
   <main class="site-main">
 
     <div class="badge-list">
       <span class="badge badge--phase">Esquisse</span>
       <span class="badge">Premiers ordres de grandeur</span>
     </div>
-    <h1>Quel U viser sur mes parois principales pour respecter la RE2020 ?</h1>
+    <h1>Quel U viser sur mes parois principales pour respecter la RE2020&nbsp;?</h1>
+    <p class="page-intro">
+      Tu es en esquisse, tu n'as pas encore de modèle thermique de bâtiment, mais tu veux
+      savoir si tes parois envisagées atteindront un niveau de performance compatible avec
+      la RE2020. Avant même de modéliser tout le bâtiment dans Pléiades, tu cherches à fixer
+      une cible U raisonnable pour tes murs, planchers et toiture.
+    </p>
 
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../esquisse.html">← Retour à la phase Esquisse</a></p>
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <div class="callout">
+      <p class="callout__title">Nuance importante</p>
+      <p>
+        La RE2020 <strong>ne fixe pas directement un U par paroi</strong>. Elle impose des
+        indicateurs globaux (Bbio, Cep, Ic_construction, Ic_énergie, DH). Tu peux construire
+        un bâtiment RE2020-conforme avec des compromis variés sur les différents postes.
+      </p>
     </div>
+    <p>
+      En revanche, l'arrêté RE2020 prévoit des <strong>valeurs garde-fou</strong> à ne pas
+      dépasser, et les bureaux d'études s'appuient sur des <strong>valeurs courantes</strong>
+      observées en pratique pour orienter les choix d'enveloppe. Connaître ces ordres de grandeur
+      permet de cadrer ses compositions dès l'esquisse.
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Niveau</th>
+          <th>U mur (W/m²·K)</th>
+          <th>Commentaire</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Garde-fou RE2020</td><td>≤ 0,36</td><td>Strict minimum réglementaire</td></tr>
+        <tr><td>Bâtiment de référence RE2020</td><td>~0,22 à 0,25</td><td>Niveau courant marché neuf</td></tr>
+        <tr><td>Bonne pratique</td><td>~0,18 à 0,22</td><td>Performance solide</td></tr>
+        <tr><td>Passivhaus</td><td>~0,12 à 0,15</td><td>Très haute performance</td></tr>
+      </tbody>
+    </table>
+    <p>
+      L'objectif de l'esquisse n'est pas de calculer un U précis, mais de <strong>s'assurer
+      que la composition envisagée tombe dans la bonne plage</strong>.
+    </p>
+
+    <!-- ======================================================
+         Outil recommandé
+         ====================================================== -->
+    <h2>Outil recommandé</h2>
+    <div class="tool-card">
+      <p class="tool-card__name">Ubakus</p>
+      <p class="tool-card__meta">Web &mdash; Gratuit, sans inscription, interface en français</p>
+      <p class="tool-card__desc">
+        Ubakus prend en entrée une paroi multi-couches (épaisseurs, matériaux) et calcule en
+        quelques secondes le coefficient U, le comportement à la condensation, et le déphasage
+        thermique. C'est l'outil le plus rapide pour dimensionner une paroi en phase amont,
+        avant toute simulation de bâtiment.
+      </p>
+      <a href="../outils/ubakus.html" class="tool-card__link">Voir la fiche Ubakus →</a>
+    </div>
+
+    <!-- ======================================================
+         Premier temps : validation PhITEM
+         ====================================================== -->
+    <h2>Premier temps&nbsp;: valider la démarche sur un cas mesuré (PhITEM)</h2>
+    <p>
+      Avant d'utiliser Ubakus pour dimensionner un projet, on commence par vérifier que l'outil
+      donne des résultats cohérents sur un cas réel mesuré. PhITEM, la maison en terre du campus
+      Grenoble INP, présente un mur monocouche en BTC stabilisée ciment 7%&nbsp;; son U a été
+      mesuré par instrumentation à <strong>1,82&nbsp;W/m²·K</strong>.
+    </p>
+
+    <h3>Étape 1 — Saisir la composition réelle du mur PhITEM</h3>
+    <p>
+      On entre les 3&nbsp;couches du mur dans Ubakus (de l'intérieur vers l'extérieur)&nbsp;:
+    </p>
+    <ul>
+      <li>Enduit chaux/ciment intérieur &mdash; 15&nbsp;mm</li>
+      <li>BTC stabilisée ciment 7% &mdash; 295&nbsp;mm (matériau personnalisé&nbsp;: λ&nbsp;=&nbsp;1,05&nbsp;W/(m·K), μ&nbsp;=&nbsp;11)</li>
+      <li>Enduit d'argile extérieur &mdash; 15&nbsp;mm</li>
+    </ul>
+    <figure class="figure">
+      <img
+        src="../assets/images/ubakus/01-saisie-couches.png"
+        alt="Composition Ubakus du mur PhITEM — 3 couches saisies"
+        loading="lazy"
+      />
+      <figcaption>Saisie des 3&nbsp;couches du mur PhITEM dans Ubakus.</figcaption>
+    </figure>
+
+    <h3>Étape 2 — Lire le résultat</h3>
+    <p>
+      Ubakus calcule instantanément un coefficient <strong>U&nbsp;=&nbsp;2,06&nbsp;W/m²·K</strong>,
+      une épaisseur totale de 32,5&nbsp;cm, un poids de 613&nbsp;kg/m² et un déphasage de 10&nbsp;h.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/ubakus/02-resultat-bandeau.png"
+        alt="Bandeau de résultats Ubakus pour le mur PhITEM"
+        loading="lazy"
+      />
+      <figcaption>Bandeau de résultats Ubakus&nbsp;: U&nbsp;=&nbsp;2,06&nbsp;W/m²·K, déphasage 10&nbsp;h.</figcaption>
+    </figure>
+    <p>
+      L'écart avec le U mesuré (1,82) est d'environ 13%. Cet écart est attendu&nbsp;: le λ
+      «&nbsp;standard&nbsp;» de la BTC stabilisée est une valeur générique, alors que le matériau
+      réel de PhITEM a probablement une conductivité légèrement plus basse (présence d'air,
+      légère humidité d'équilibre). <strong>Conclusion&nbsp;: un calcul Ubakus donne le bon
+      ordre de grandeur, pas la valeur exacte. C'est suffisant pour la phase esquisse.</strong>
+    </p>
+
+    <h3>Étape 3 — Visualiser le diagramme de température</h3>
+    <p>
+      L'onglet <em>Diagrammes</em> d'Ubakus montre comment la température évolue dans
+      l'épaisseur du mur, de l'intérieur (20°C) vers l'extérieur (&minus;5°C). Le mur PhITEM,
+      monocouche, présente une décroissance linéaire &mdash; l'inverse d'un mur avec isolant
+      rapporté où l'essentiel de la chute thermique se concentre dans l'isolant.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/ubakus/03-diagramme-temperature.png"
+        alt="Diagramme de température dans le mur PhITEM — décroissance linéaire"
+        loading="lazy"
+      />
+      <figcaption>Diagramme de température Ubakus&nbsp;: décroissance linéaire dans le mur monocouche PhITEM.</figcaption>
+    </figure>
+
+    <!-- ======================================================
+         Deuxième temps : dimensionner RE2020
+         ====================================================== -->
+    <h2>Deuxième temps&nbsp;: dimensionner une paroi RE2020</h2>
+    <p>
+      Maintenant qu'on sait utiliser Ubakus, on passe à la démarche de conception. PhITEM tel
+      quel n'est pas RE2020-conforme (U&nbsp;=&nbsp;2 alors que le garde-fou est à 0,36). On
+      ajoute une couche de fibre de bois côté extérieur et on regarde comment l'épaisseur
+      d'isolant fait évoluer le U.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/ubakus/04-saisie-avec-isolant.png"
+        alt="Composition Ubakus avec 16 cm de fibre de bois ajoutée"
+        loading="lazy"
+      />
+      <figcaption>Mur PhITEM avec 16&nbsp;cm de fibre de bois côté extérieur — U&nbsp;=&nbsp;0,22&nbsp;W/m²·K.</figcaption>
+    </figure>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Épaisseur fibre de bois</th>
+          <th>U obtenu</th>
+          <th>Niveau atteint</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>0&nbsp;cm</td><td>2,06</td><td>Hors normes</td></tr>
+        <tr><td>8&nbsp;cm</td><td>0,40</td><td>Sous garde-fou RE2020 (0,36 à peine dépassé)</td></tr>
+        <tr><td>12&nbsp;cm</td><td>0,29</td><td>Bâtiment de référence RE2020</td></tr>
+        <tr><td><strong>16&nbsp;cm</strong></td><td><strong>0,22</strong></td><td><strong>Bonne pratique</strong></td></tr>
+        <tr><td>20&nbsp;cm</td><td>0,18</td><td>Niveau Passivhaus</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>Trois enseignements ressortent de ce test&nbsp;:</p>
+    <p>
+      <strong>1. Les 8 premiers centimètres font 80% du travail.</strong> Passer de «&nbsp;sans
+      isolant&nbsp;» à 8&nbsp;cm fait chuter le U de 2,06 à 0,40, soit &minus;80%. C'est massif.
+      Les centimètres suivants n'apportent que des gains marginaux.
+    </p>
+    <p>
+      <strong>2. La cible RE2020 se joue vers 12&ndash;16&nbsp;cm d'isolant biosourcé</strong>
+      sur une paroi maçonnée standard. C'est l'ordre de grandeur à viser en esquisse &mdash;
+      bien plus qu'un mur de 20&nbsp;cm tout nu, bien moins qu'un mur de 60&nbsp;cm.
+    </p>
+    <p>
+      <strong>3. Au-delà de 16&nbsp;cm, le coût marginal devient absurde.</strong> Passer de
+      16 à 20&nbsp;cm fait gagner 0,04&nbsp;W/m²·K (4%), mais ajoute 4&nbsp;cm d'épaisseur et
+      autant de carbone incorporé. À justifier uniquement par une ambition Passivhaus.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites</h2>
+    <ul>
+      <li>
+        <strong>Ubakus ne remplace pas une simulation thermique dynamique.</strong> Le coefficient
+        U est une caractéristique de paroi en régime permanent&nbsp;; il ne dit rien sur le confort
+        d'été, les apports solaires, les ponts thermiques au niveau du bâtiment, ni sur la
+        consommation totale. Pour ces questions, il faut passer à
+        <a href="u-global.html">Pléiades en APS</a>.
+      </li>
+      <li>
+        <strong>Le U calculé est théorique.</strong> Il diffère du U réel mesuré sur paroi pour
+        plusieurs raisons (humidité, défauts de pose, inertie). L'écart est typiquement de
+        10 à 20%.
+      </li>
+      <li>
+        <strong>La bibliothèque Ubakus est très orientée Allemagne.</strong> Pour certains
+        matériaux français spécifiques (BTC stabilisée, terre crue locale), il faut créer
+        un matériau personnalisé.
+      </li>
+      <li>
+        <strong>La RE2020 ne fixe pas un U par paroi</strong>, mais des indicateurs globaux.
+        Le U calculé ici est une aide à la décision, pas une preuve de conformité.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong>Calcul à la main</strong> &mdash;
+        R&nbsp;=&nbsp;épaisseur&nbsp;/&nbsp;λ, U&nbsp;=&nbsp;1&nbsp;/&nbsp;(R<sub>si</sub>&nbsp;+&nbsp;ΣR&nbsp;+&nbsp;R<sub>se</sub>).
+        Faisable pour vérifier l'ordre de grandeur d'Ubakus, mais long pour des parois multicouches.
+      </li>
+      <li>
+        <strong>Pléiades / Ubakus intégré</strong> &mdash;
+        Pléiades intègre nativement le calcul de U lors de la création des compositions de paroi.
+        Avantage&nbsp;: cohérence avec la simulation thermique qui suivra.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li>Arrêté du 4 août 2021 relatif à la RE2020 &mdash; valeurs garde-fou</li>
+      <li>Documentation Ubakus &mdash; bibliothèque de matériaux</li>
+      <li>ADEME &mdash; Guide «&nbsp;Isolation des murs&nbsp;»</li>
+      <li><a href="u-global.html">Fiche U global APS (Pléiades)</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="carbone-esquisse.html" class="page-nav__prev">← Carbone Esquisse</a>
+      <a href="../esquisse.html" class="page-nav__center">↑ Retour à Esquisse</a>
+      <a href="../esquisse.html" class="page-nav__next">Retour Esquisse →</a>
+    </nav>
 
   </main>
 
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
   <footer class="site-footer">
     <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
   </footer>
