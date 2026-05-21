@@ -11,6 +11,9 @@
 </head>
 <body>
 
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="site-header__logo">
@@ -27,6 +30,9 @@
     </div>
   </header>
 
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <a href="../index.html">Accueil</a>
     <span class="breadcrumb__sep">›</span>
@@ -35,6 +41,9 @@
     <span class="breadcrumb__current">Sunearthtools</span>
   </nav>
 
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
   <main class="site-main">
 
     <div class="badge-list">
@@ -42,13 +51,224 @@
     </div>
     <h1>Sunearthtools</h1>
 
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../outils.html">← Retour à la liste des outils</a></p>
+    <!-- ======================================================
+         Bloc identité
+         ====================================================== -->
+    <div class="tool-identity">
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Éditeur</span>
+        <span class="tool-identity__value">sunearthtools.com (outil indépendant)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Type</span>
+        <span class="tool-identity__value">Application web</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Plateforme</span>
+        <span class="tool-identity__value">Web &mdash; tous OS, sans installation, sans inscription</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Tarif</span>
+        <span class="tool-identity__value">Gratuit</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Site officiel</span>
+        <span class="tool-identity__value">
+          <a href="https://www.sunearthtools.com/dp/tools/pos_sun.php" target="_blank" rel="noopener">
+            sunearthtools.com →
+          </a>
+        </span>
+      </div>
     </div>
+
+    <!-- ======================================================
+         À quoi ça sert
+         ====================================================== -->
+    <h2>À quoi ça sert</h2>
+    <p>
+      Sunearthtools est un site web qui génère instantanément le diagramme solaire pour
+      n'importe quelle coordonnée GPS dans le monde. Il indique la trajectoire du soleil au
+      fil des heures et des saisons, l'angle d'élévation solaire (hauteur), l'azimut
+      (orientation), et les heures de lever et de coucher du soleil pour n'importe quelle
+      date et n'importe quel lieu.
+    </p>
+    <p>
+      C'est l'outil le plus rapide pour répondre à une question simple mais fondamentale en
+      esquisse&nbsp;: <strong>comment le soleil se déplace-t-il autour de mon terrain au fil
+      de l'année&nbsp;?</strong>
+    </p>
+
+    <!-- ======================================================
+         Quand l'utiliser dans cette toolbox
+         ====================================================== -->
+    <h2>Quand l'utiliser dans cette toolbox</h2>
+    <p>
+      Phase Esquisse, avant même de modéliser quoi que ce soit. Il suffit d'avoir les
+      coordonnées GPS du terrain.
+    </p>
+    <ul>
+      <li><a href="../questions/course-soleil.html">Quelle est la course du soleil sur mon terrain&nbsp;?</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Prise en main
+         ====================================================== -->
+    <h2>Prise en main</h2>
+    <p>
+      Immédiate &mdash; moins de 5&nbsp;minutes pour obtenir un diagramme solaire complet.
+      Aucun prérequis technique. Tu entres une localisation et une date, le diagramme s'affiche
+      automatiquement. L'interface est en anglais mais l'utilisation est intuitive.
+    </p>
+
+    <!-- ======================================================
+         Les vues disponibles
+         ====================================================== -->
+    <h2>Les vues disponibles</h2>
+
+    <h3>Vue cartésienne &mdash; la plus pédagogique</h3>
+    <p>
+      Affiche la hauteur du soleil (axe vertical, en degrés) en fonction de l'azimut (axe
+      horizontal, orientation). Chaque courbe représente la trajectoire d'un jour particulier.
+      On voit en un coup d'œil l'écart entre la course basse du solstice d'hiver
+      (~22°&nbsp;à Grenoble) et la course haute du solstice d'été (~68°).
+    </p>
+
+    <h3>Vue polaire &mdash; pour les directions de lever/coucher</h3>
+    <p>
+      Montre les directions de lever et de coucher du soleil selon les saisons, vues du
+      dessus. Utile pour visualiser de quel côté du terrain le soleil arrive le matin et le soir.
+    </p>
+
+    <h3>Tableau de position horaire</h3>
+    <p>
+      Donne l'élévation et l'azimut exact du soleil heure par heure pour une date donnée.
+      Utile pour calculer des ombres portées ou vérifier l'ensoleillement à une heure précise.
+    </p>
+
+    <h3>Module ombre</h3>
+    <p>
+      Calcule la longueur d'ombre portée par un obstacle vertical, à partir de sa hauteur et
+      de l'élévation solaire. Utile pour estimer si un bâtiment voisin ombrage une façade.
+    </p>
+
+    <!-- ======================================================
+         Comment l'utiliser
+         ====================================================== -->
+    <h2>Comment l'utiliser</h2>
+    <ol>
+      <li>
+        Aller sur
+        <a href="https://www.sunearthtools.com/dp/tools/pos_sun.php" target="_blank" rel="noopener">sunearthtools.com →</a>
+      </li>
+      <li>
+        Entrer les coordonnées GPS du terrain dans le champ de localisation
+        (format&nbsp;: <code>45.1907, 5.7667</code> pour PhITEM)
+      </li>
+      <li>
+        Choisir une date&nbsp;:
+        <ul>
+          <li><strong>21 décembre</strong> (solstice d'hiver) &mdash; course la plus basse, journée la plus courte</li>
+          <li><strong>21 juin</strong> (solstice d'été) &mdash; course la plus haute, journée la plus longue</li>
+          <li><strong>21 mars / 21 septembre</strong> (équinoxes) &mdash; situation intermédiaire</li>
+        </ul>
+      </li>
+      <li>Lire le diagramme et noter les valeurs-clés</li>
+    </ol>
+    <div class="callout callout--info">
+      <p>
+        Les captures d'écran pas-à-pas sont dans la fiche question
+        <a href="../questions/course-soleil.html">Course du soleil</a>.
+      </p>
+    </div>
+
+    <!-- ======================================================
+         Forces et limites
+         ====================================================== -->
+    <h2>Forces et limites</h2>
+    <div class="two-cols">
+
+      <div>
+        <h3>Forces</h3>
+        <ul>
+          <li>Gratuit, sans inscription, sans installation</li>
+          <li>Fonctionne sur Mac, Windows, mobile, n'importe quel navigateur</li>
+          <li>Résultats instantanés</li>
+          <li>Couvre n'importe quel lieu dans le monde</li>
+          <li>Plusieurs modules complémentaires (ombre portée, tableau horaire, export CSV)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Limites</h3>
+        <ul>
+          <li>Trajectoire théorique du soleil &mdash; aucune prise en compte des masques environnementaux (bâtiments, relief, végétation)</li>
+          <li>Pas de visualisation 3D sur un modèle de bâtiment</li>
+          <li>Interface datée, peu esthétique</li>
+          <li>Données astronomiques uniquement &mdash; pas de données météo ni de rayonnement réel</li>
+          <li>Pour voir l'impact sur des façades modélisées, passer sur Forma ou Rhino&nbsp;+&nbsp;Ladybug</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong><a href="forma.html">Autodesk Forma</a></strong> &mdash;
+        analyse d'ensoleillement sur la volumétrie modélisée, avec heures par façade.
+      </li>
+      <li>
+        <strong><a href="rhino-ladybug.html">Rhino + Ladybug</a></strong> &mdash;
+        diagramme solaire paramétrique sur modèle 3D.
+      </li>
+      <li>
+        <strong><a href="pleiades.html">Pléiades</a></strong> &mdash;
+        lecture du fichier météo EPW avec visualisation de la course du soleil.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Ressources
+         ====================================================== -->
+    <h2>Ressources</h2>
+    <ul>
+      <li>
+        <a href="https://www.sunearthtools.com" target="_blank" rel="noopener">
+          Site officiel Sunearthtools →
+        </a>
+      </li>
+      <li>
+        <a href="https://www.ladybug.tools/epwmap" target="_blank" rel="noopener">
+          EPW map — fichiers météo par localisation →
+        </a>
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Cas d'usage dans cette toolbox
+         ====================================================== -->
+    <h2>Cas d'usage dans cette toolbox</h2>
+    <ul>
+      <li><a href="../questions/course-soleil.html">Course du soleil sur mon terrain</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation">
+      <span></span>
+      <a href="../outils.html" class="page-nav__center">← Retour à la liste des outils</a>
+      <span></span>
+    </nav>
 
   </main>
 
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
   <footer class="site-footer">
     <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
   </footer>
