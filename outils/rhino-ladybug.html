@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolbox AGILE-BAT — Rhino + Grasshopper + Ladybug</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       EN-TÊTE
+       ======================================================== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="site-header__logo">
+        Toolbox <span class="accent">AGILE-BAT</span>
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../esquisse.html">Esquisse</a></li>
+          <li><a href="../aps.html">APS</a></li>
+          <li><a href="../outils.html" aria-current="page">Outils</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       FIL D'ARIANE
+       ======================================================== -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="../index.html">Accueil</a>
+    <span class="breadcrumb__sep">›</span>
+    <a href="../outils.html">Outils</a>
+    <span class="breadcrumb__sep">›</span>
+    <span class="breadcrumb__current">Rhino + Grasshopper + Ladybug</span>
+  </nav>
+
+  <!-- ========================================================
+       CONTENU PRINCIPAL
+       ======================================================== -->
+  <main class="site-main">
+
+    <div class="badge-list">
+      <span class="badge badge--phase">APS</span>
+    </div>
+    <h1>Rhino + Grasshopper + Ladybug</h1>
+
+    <!-- ======================================================
+         Bloc identité
+         ====================================================== -->
+    <div class="tool-identity">
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Éditeur</span>
+        <span class="tool-identity__value">McNeel (Rhino &amp; Grasshopper) + Ladybug Tools (Ladybug/Honeybee)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Type</span>
+        <span class="tool-identity__value">Logiciel desktop + plugin paramétrique + extensions d'analyse environnementale</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Plateforme</span>
+        <span class="tool-identity__value">Windows et Mac (Rhino 8)</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Tarif</span>
+        <span class="tool-identity__value">Rhino payant (licence étudiante ~195&nbsp;€) &mdash; Grasshopper, Ladybug et Honeybee gratuits</span>
+      </div>
+      <div class="tool-identity__row">
+        <span class="tool-identity__label">Site officiel</span>
+        <span class="tool-identity__value">
+          <a href="https://www.ladybug.tools" target="_blank" rel="noopener">ladybug.tools →</a>
+        </span>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         À quoi ça sert
+         ====================================================== -->
+    <h2>À quoi ça sert</h2>
+    <p>
+      Rhino est un modeleur 3D de référence en architecture. Grasshopper, son interface de
+      programmation visuelle, permet de construire des scripts paramétriques sans coder.
+      Ladybug et Honeybee sont des extensions Grasshopper dédiées à l'analyse environnementale
+      des bâtiments&nbsp;: elles permettent de simuler la course du soleil, les heures
+      d'ensoleillement direct, les masques solaires, le rayonnement sur les façades, et d'autres
+      phénomènes physiques directement dans l'environnement 3D du projet.
+    </p>
+    <p>
+      C'est l'outil de référence pour les étudiants qui souhaitent pousser l'analyse
+      environnementale dans un environnement paramétrique, en explorant rapidement des variantes
+      géométriques et leurs impacts.
+    </p>
+
+    <!-- ======================================================
+         Quand l'utiliser dans cette toolbox
+         ====================================================== -->
+    <h2>Quand l'utiliser dans cette toolbox</h2>
+    <p>
+      Phase APS et au-delà. Rhino demande de disposer d'un modèle 3D du bâtiment et de son
+      contexte. Ce n'est pas un outil d'esquisse sans modèle préalable.
+    </p>
+    <p>Rhino&nbsp;+&nbsp;Ladybug répond aux questions&nbsp;:</p>
+    <ul>
+      <li><a href="../questions/masques-solaires.html">Mon terrain subit-il des masques solaires&nbsp;?</a></li>
+      <li><a href="../questions/orientation.html">Quelle orientation principale donner à mon bâtiment&nbsp;?</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Prérequis
+         ====================================================== -->
+    <h2>Prérequis</h2>
+    <p>Avant de commencer, il faut avoir installé&nbsp;:</p>
+    <ul>
+      <li>Rhino (version 7 ou 8)</li>
+      <li>Grasshopper (inclus dans Rhino)</li>
+      <li>Ladybug Tools via le gestionnaire de packages Grasshopper</li>
+    </ul>
+
+    <!-- ======================================================
+         Prise en main
+         ====================================================== -->
+    <h2>Prise en main</h2>
+    <p>
+      Rhino&nbsp;+&nbsp;Grasshopper&nbsp;+&nbsp;Ladybug demande un investissement réel.
+      Compter une journée pour être opérationnel sur les analyses de base. La logique
+      Grasshopper (nodes + connexions) est différente des logiciels traditionnels&nbsp;: on
+      construit un graphe de composants plutôt qu'on utilise des menus. Une fois maîtrisée,
+      cette logique est très puissante pour tester des variantes rapidement.
+    </p>
+
+    <!-- ======================================================
+         Étapes générales d'une analyse solaire
+         ====================================================== -->
+    <h2>Étapes générales d'une analyse solaire</h2>
+
+    <h3>Étape 0 — Réglage de l'interface</h3>
+    <p>
+      Au premier lancement de Rhino, configurer les unités en mètres
+      (Outils&nbsp;→&nbsp;Options&nbsp;→&nbsp;Unités&nbsp;→&nbsp;Mètre), activer l'accrochage
+      «&nbsp;Fin&nbsp;», et activer le mode orthogonal (commande <code>ModeOrtho</code>).
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/01-interface-rhino.png"
+        alt="Interface Rhino avec réglages de base — unités mètres et accrochages"
+        loading="lazy"
+      />
+      <figcaption>Interface Rhino configurée&nbsp;: unités en mètres, accrochage Fin activé.</figcaption>
+    </figure>
+
+    <h3>Étape 1 — Dessiner le bâtiment</h3>
+    <p>
+      Utiliser la commande <code>Polyline</code> pour tracer l'emprise du bâtiment en 2D avec
+      les coordonnées précises (syntaxe <code>rx,y</code>). Vérifier les cotes avec l'outil
+      Cotation. Extruder ensuite le plan 2D en volume 3D avec l'outil Boîte, en précisant
+      la hauteur.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/03-dessin-batiment.png.png"
+        alt="Dessin et extrusion du bâtiment dans Rhino"
+        loading="lazy"
+      />
+      <figcaption>Emprise du bâtiment tracée en 2D puis extrudée en volume 3D dans Rhino.</figcaption>
+    </figure>
+
+    <h3>Étape 2 — Importer le fichier météo</h3>
+    <p>
+      Ouvrir Grasshopper (commande <code>Grasshopper</code>). Ajouter un composant
+      <code>LB Import EPW</code> et un composant <code>File Path</code>, puis connecter
+      le fichier EPW de la localisation voulue (disponible sur
+      <a href="https://climate.onebuilding.org" target="_blank" rel="noopener">climate.onebuilding.org</a>
+      ou <a href="https://www.ladybug.tools/epwmap" target="_blank" rel="noopener">ladybug.tools/epwmap</a>).
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/06-connexion-sunpath.png.png"
+        alt="Connexion File Path vers ImportEPW dans Grasshopper"
+        loading="lazy"
+      />
+      <figcaption>Connexion <code>File Path</code>&nbsp;→&nbsp;<code>LB Import EPW</code> dans Grasshopper.</figcaption>
+    </figure>
+
+    <h3>Étape 3 — Modéliser la course du soleil</h3>
+    <p>
+      Ajouter le composant <code>LB Sunpath</code> et le connecter au nœud <code>location</code>
+      de <code>ImportEPW</code>. Définir un point au centre du bâtiment (composant
+      <code>Point</code>&nbsp;→ <code>Set a Point</code> sur Rhino) et le connecter au nœud
+      <code>center_pt</code> du Sunpath. Lancer la simulation (F5)&nbsp;: la voûte solaire
+      apparaît dans Rhino.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/07-sunpath-resultat.png.png"
+        alt="Course du soleil affichée en voûte sur le modèle Rhino"
+        loading="lazy"
+      />
+      <figcaption>Voûte solaire Ladybug affichée autour du bâtiment dans Rhino.</figcaption>
+    </figure>
+
+    <h3>Étape 4 — Analyser les masques d'ombre</h3>
+    <p>
+      Modéliser les bâtiments voisins sur Rhino. Ajouter dans Grasshopper les composants
+      <code>LB Direct Sun Hours</code>, <code>Number Slider</code>,
+      <code>Boolean Toggle</code>, <code>LB Analysis Period</code> et un composant
+      <code>Geometry</code> pour chaque bâtiment. Connecter selon le schéma ci-dessous,
+      puis lancer la simulation.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/09-masques-connexions.png"
+        alt="Schéma de connexion complet des composants masques d'ombre dans Grasshopper"
+        loading="lazy"
+      />
+      <figcaption>Schéma de connexion des composants Ladybug pour l'analyse des masques d'ombre.</figcaption>
+    </figure>
+
+    <h3>Résultat — Heatmap d'ensoleillement</h3>
+    <p>
+      Le toit et les façades du bâtiment sont colorés selon le nombre d'heures d'ensoleillement
+      direct reçues sur l'année. Les zones rouges/jaunes sont très ensoleillées&nbsp;; les zones
+      bleues sont masquées.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/10-masques-resultat.png.png"
+        alt="Heatmap d'ensoleillement sur le bâtiment — rouge : ensoleillé, bleu : masqué"
+        loading="lazy"
+      />
+      <figcaption>Heatmap d'ensoleillement direct annuel — rouge/jaune&nbsp;: très ensoleillé&nbsp;; bleu&nbsp;: masqué.</figcaption>
+    </figure>
+
+    <!-- ======================================================
+         Forces et limites
+         ====================================================== -->
+    <h2>Forces et limites</h2>
+    <div class="two-cols">
+
+      <div>
+        <h3>Forces</h3>
+        <ul>
+          <li>Analyse environnementale directement sur le modèle 3D du projet</li>
+          <li>Paramétrique&nbsp;: un changement de géométrie met à jour l'analyse automatiquement</li>
+          <li>Ladybug et Honeybee sont gratuits</li>
+          <li>Très large communauté, nombreux tutoriels en ligne</li>
+          <li>Résultats visuels très lisibles (heatmaps sur les façades)</li>
+          <li>Compatible Mac depuis Rhino&nbsp;8</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Limites</h3>
+        <ul>
+          <li>Rhino est payant (licence étudiante ~195&nbsp;€)</li>
+          <li>Courbe d'apprentissage réelle sur Grasshopper</li>
+          <li>Pas adapté à la toute première esquisse sans modèle 3D</li>
+          <li>Pour une conformité RE2020 réglementaire, il faut passer sur Pléiades ou OpenStudio</li>
+          <li>Ladybug calcule des heures d'ensoleillement, pas des besoins thermiques dynamiques</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ======================================================
+         Ressources
+         ====================================================== -->
+    <h2>Ressources</h2>
+    <ul>
+      <li><a href="https://www.ladybug.tools" target="_blank" rel="noopener">Ladybug Tools (documentation officielle) →</a></li>
+      <li><a href="https://www.ladybug.tools/epwmap" target="_blank" rel="noopener">EPW map — trouver son fichier météo →</a></li>
+      <li><a href="https://climate.onebuilding.org" target="_blank" rel="noopener">climate.onebuilding.org — téléchargement des fichiers EPW →</a></li>
+      <li><a href="https://discourse.mcneel.com" target="_blank" rel="noopener">Communauté Grasshopper / McNeel →</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Cas d'usage dans cette toolbox
+         ====================================================== -->
+    <h2>Cas d'usage dans cette toolbox</h2>
+    <ul>
+      <li><a href="../questions/masques-solaires.html">Masques solaires des bâtiments voisins</a></li>
+      <li><a href="../questions/orientation.html">Orientation du bâtiment</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation">
+      <span></span>
+      <a href="../outils.html" class="page-nav__center">← Retour à la liste des outils</a>
+      <span></span>
+    </nav>
+
+  </main>
+
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
+  <footer class="site-footer">
+    <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
+  </footer>
+
+</body>
+</html>

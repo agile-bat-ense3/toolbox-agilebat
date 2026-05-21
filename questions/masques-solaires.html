@@ -50,15 +50,216 @@
       <span class="badge badge--phase">Esquisse</span>
       <span class="badge">Analyser le site et le contexte</span>
     </div>
-    <h1>Mon terrain subit-il des masques solaires ?</h1>
+    <h1>Mon terrain subit-il des masques solaires&nbsp;?</h1>
+    <p class="page-intro">
+      Tu as un terrain. Des bâtiments voisins, un relief ou de la végétation dense sont
+      présents autour de lui. Tu veux savoir si ta façade sud sera effectivement ensoleillée
+      en hiver, ou si elle sera masquée une partie de la journée. C'est une question à se
+      poser avant de figer l'orientation et l'implantation du bâtiment.
+    </p>
 
-    <div class="stub-message">
-      <p>Cette fiche est en cours de rédaction. Reviens bientôt.</p>
-      <p><a href="../esquisse.html">← Retour à la phase Esquisse</a></p>
+    <!-- ======================================================
+         Pourquoi cette question compte
+         ====================================================== -->
+    <h2>Pourquoi cette question compte</h2>
+    <p>
+      Un masque solaire peut ruiner une stratégie bioclimatique bien pensée. Un bâtiment
+      orienté plein sud avec de grandes baies vitrées ne captera presque rien en hiver si
+      un immeuble voisin le prive de soleil entre 9h et 15h. L'analyse des masques est donc
+      une des premières vérifications à faire sur un terrain urbain ou semi-urbain, avant
+      de dimensionner les vitrages et les protections solaires.
+    </p>
+    <p>
+      À l'inverse, un masque partiel peut être un atout en été&nbsp;: il réduit les apports
+      solaires aux heures chaudes sans supprimer les apports d'hiver. Le tout est de
+      l'anticiper plutôt que de le subir.
+    </p>
+
+    <!-- ======================================================
+         Deux approches selon le stade
+         ====================================================== -->
+    <h2>Deux approches selon ton stade</h2>
+
+    <div class="tool-card">
+      <p class="tool-card__name">Approche légère — Autodesk Forma (Esquisse)</p>
+      <p class="tool-card__desc">
+        Si tu n'as pas encore de modèle 3D détaillé, Forma permet de placer une masse
+        volumétrique simple dans son contexte urbain et de visualiser les heures
+        d'ensoleillement par façade directement dans le navigateur. C'est la méthode la
+        plus rapide, sans installation.
+      </p>
+      <a href="../outils/forma.html" class="tool-card__link">Voir la fiche Forma →</a>
     </div>
+
+    <div class="tool-card">
+      <p class="tool-card__name">Approche avancée — Rhino + Grasshopper + Ladybug (APS)</p>
+      <p class="tool-card__desc">
+        Si tu travailles déjà dans Rhino, Ladybug permet une analyse plus fine&nbsp;: heures
+        d'ensoleillement direct par point de surface, visualisation sur toute l'année ou sur
+        une période précise, heatmap colorée sur les façades. C'est l'approche documentée
+        dans ce tutoriel.
+      </p>
+      <a href="../outils/rhino-ladybug.html" class="tool-card__link">Voir la fiche Rhino + Ladybug →</a>
+    </div>
+
+    <!-- ======================================================
+         Faire le test
+         ====================================================== -->
+    <h2>Faire le test&nbsp;: masques solaires avec Rhino&nbsp;+&nbsp;Ladybug</h2>
+    <p>
+      Le tutoriel ci-dessous a été réalisé sur un modèle simplifié aux dimensions de PhITEM
+      (7&nbsp;m&nbsp;×&nbsp;7,5&nbsp;m), avec un bâtiment voisin simulant un masque d'ombre.
+    </p>
+
+    <h3>Étape 1 — Modéliser le bâtiment et ses voisins sur Rhino</h3>
+    <p>
+      Dessiner l'emprise du bâtiment en 2D avec la commande <code>Polyline</code>, vérifier
+      les cotes avec l'outil Cotation, puis extruder en 3D avec l'outil Boîte. Modéliser
+      de la même façon les bâtiments voisins qui pourraient créer des masques.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/04-extrusion-3d.png.png"
+        alt="Modèle Rhino du bâtiment PhITEM extrudé en 3D avec bâtiment voisin"
+        loading="lazy"
+      />
+      <figcaption>Bâtiment PhITEM et masque voisin modélisés en 3D dans Rhino.</figcaption>
+    </figure>
+
+    <h3>Étape 2 — Ajouter les composants dans Grasshopper</h3>
+    <p>
+      Ouvrir Grasshopper (commande <code>Grasshopper</code> dans Rhino). Ajouter les
+      composants suivants sur le canvas&nbsp;:
+    </p>
+    <ul>
+      <li><code>LB Import EPW</code> + <code>File Path</code> — pour charger le fichier météo</li>
+      <li><code>LB Sunpath</code> — pour la course du soleil</li>
+      <li><code>LB Analysis Period</code> — pour définir la période d'analyse</li>
+      <li><code>LB Direct Sun Hours</code> — pour calculer les heures d'ensoleillement</li>
+      <li>Un composant <code>Geometry</code> pour ton bâtiment, un autre pour chaque masque voisin</li>
+    </ul>
+    <p>La connexion complète de ces composants est détaillée à l'étape suivante.</p>
+
+    <h3>Étape 3 — Connecter les blocs et lancer la simulation</h3>
+    <p>Relier les composants selon le schéma ci-dessous&nbsp;:</p>
+    <ul>
+      <li><code>File Path</code> → entrée <code>_epw_file</code> du bloc <code>ImportEPW</code></li>
+      <li>Sortie <code>location</code> de <code>ImportEPW</code> → entrée <code>_location</code> de <code>Sunpath</code></li>
+      <li>Sortie <code>hoys</code> de <code>AnalysisPeriod</code> → entrée <code>hoys_</code> de <code>Sunpath</code></li>
+      <li>Sortie <code>vectors</code> de <code>Sunpath</code> → entrée <code>_vectors</code> de <code>DirectSunHours</code></li>
+      <li>Geometry de ton bâtiment → entrée <code>_geometry</code> de <code>DirectSunHours</code></li>
+      <li>Geometry des masques → entrée <code>context_</code> de <code>DirectSunHours</code></li>
+      <li><code>Number Slider</code> (valeur&nbsp;1) → entrée <code>_grid_size</code> de <code>DirectSunHours</code></li>
+      <li><code>Boolean Toggle</code> (valeur True) → entrée <code>_run</code> de <code>DirectSunHours</code></li>
+    </ul>
+    <p>Lancer la simulation avec F5 ou Solution&nbsp;→&nbsp;Recompute.</p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/09-masques-connexions.png"
+        alt="Schéma de connexion complet des composants masques d'ombre dans Grasshopper"
+        loading="lazy"
+      />
+      <figcaption>Schéma de connexion des composants Ladybug pour l'analyse des masques d'ombre.</figcaption>
+    </figure>
+
+    <h3>Étape 4 — Lire la heatmap d'ensoleillement</h3>
+    <p>
+      Le résultat s'affiche directement sur le modèle Rhino&nbsp;: le toit et les façades sont
+      colorés selon les heures d'ensoleillement direct reçues sur la période d'analyse.
+      Rouge et jaune signifient très ensoleillé, bleu signifie masqué.
+    </p>
+    <figure class="figure">
+      <img
+        src="../assets/images/rhino-ladybug/10-masques-resultat.png.png"
+        alt="Heatmap Ladybug : heures d'ensoleillement direct sur les façades"
+        loading="lazy"
+      />
+      <figcaption>Heatmap d'ensoleillement direct annuel&nbsp;: rouge/jaune&nbsp;= très ensoleillé, bleu&nbsp;= masqué.</figcaption>
+    </figure>
+
+    <!-- ======================================================
+         Comment lire le résultat
+         ====================================================== -->
+    <h2>Comment lire le résultat</h2>
+    <p>
+      La heatmap montre la distribution spatiale de l'ensoleillement sur l'année complète ou
+      sur une période précise. Pour l'analyse de masques en conception, les valeurs à regarder
+      en priorité sont les heures reçues sur la <strong>façade sud en hiver</strong>
+      (décembre-janvier)&nbsp;: si elles sont inférieures à 4-5 heures par jour, les apports
+      solaires passifs seront très limités.
+    </p>
+    <p>
+      Pour affiner, relancer la simulation sur une période précise en ajustant le composant
+      <code>LB Analysis Period</code> (décembre uniquement, ou les mois de chauffage). Cela
+      permet de distinguer ce qui est masqué seulement en été de ce qui l'est toute l'année.
+    </p>
+
+    <!-- ======================================================
+         Limites
+         ====================================================== -->
+    <h2>Limites</h2>
+    <ul>
+      <li>
+        La modélisation des masques sur Rhino demande de connaître la hauteur et l'emprise
+        des bâtiments voisins. Ces données sont parfois difficiles à obtenir en phase esquisse.
+      </li>
+      <li>
+        Ladybug calcule des heures d'ensoleillement direct, pas un gain thermique&nbsp;: pour
+        quantifier l'effet sur les besoins de chauffage, il faut passer sur
+        <a href="../outils/pleiades.html">Pléiades</a>.
+      </li>
+      <li>
+        Sur des sites complexes (relief montagneux, canyon urbain dense), la modélisation
+        peut devenir lourde.
+      </li>
+      <li>
+        Pour une analyse très rapide sans installation,
+        <a href="../outils/forma.html">Forma</a> est plus accessible que Rhino&nbsp;+&nbsp;Ladybug.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Alternatives
+         ====================================================== -->
+    <h2>Alternatives</h2>
+    <ul>
+      <li>
+        <strong><a href="../outils/forma.html">Autodesk Forma</a></strong> &mdash;
+        analyse d'ensoleillement rapide sur masses volumétriques, dans le navigateur,
+        sans installation.
+      </li>
+      <li>
+        <strong><a href="../outils/pleiades.html">Pléiades</a></strong> &mdash;
+        intègre les masques proches dans la simulation thermique complète, avec impact
+        quantifié sur les besoins.
+      </li>
+    </ul>
+
+    <!-- ======================================================
+         Pour aller plus loin
+         ====================================================== -->
+    <h2>Pour aller plus loin</h2>
+    <ul>
+      <li><a href="../outils/rhino-ladybug.html">Fiche outil Rhino + Ladybug</a></li>
+      <li><a href="../outils/forma.html">Fiche outil Forma</a></li>
+      <li><a href="https://www.ladybug.tools" target="_blank" rel="noopener">Ladybug Tools documentation →</a></li>
+      <li><a href="https://www.ladybug.tools/epwmap" target="_blank" rel="noopener">EPW map — trouver son fichier météo →</a></li>
+    </ul>
+
+    <!-- ======================================================
+         Navigation bas de page
+         ====================================================== -->
+    <nav class="page-nav" aria-label="Navigation entre fiches">
+      <a href="course-soleil.html" class="page-nav__prev">← Course du soleil</a>
+      <a href="../esquisse.html" class="page-nav__center">↑ Retour à Esquisse</a>
+      <a href="vents-dominants.html" class="page-nav__next">Vents dominants →</a>
+    </nav>
 
   </main>
 
+  <!-- ========================================================
+       PIED DE PAGE
+       ======================================================== -->
   <footer class="site-footer">
     <p>Projet AGILE-BAT &mdash; Grenoble INP &ndash; ENSE3 &mdash; Parcours PARIN 2e année</p>
   </footer>
